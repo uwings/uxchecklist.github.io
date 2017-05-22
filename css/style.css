@@ -39,6 +39,9 @@ body {
 .right {
 	float: right;
 }
+.hide {
+	display: none;
+}
 
 
 .rotate {
@@ -123,12 +126,27 @@ button i,
 }
 
 #header {
-    padding: 0.8rem;
-    text-align: center;
+	position: fixed;
+    padding: 10px;
+    box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+    background: #FFF;
+    width: 100%;
+    z-index: 1;
+    height: 60px;
+    margin: 0;
 }
 #header h1 {
 	display: inline-block;
 	padding: 5px;
+}
+#header a {
+	color: #2d70dc;
+    font-size: 0.8em;
+    padding-left: 10px;
+}
+#header #signin-success i{
+	margin-right: 4px;
+    color: #2d70dc;
 }
 small {
 	font-size: 0.7em;
@@ -139,8 +157,12 @@ small {
 	vertical-align: top
 }
 
-#title, #gdrivebox {
+#gdrivebox {
 	margin-bottom: 10px;
+}
+
+#checklist-form {
+	padding-top: 60px;
 }
 
 #footer {
@@ -262,11 +284,6 @@ small {
 	border-radius: 5px;
 	font-size: 0.9em;
 	font-weight: lighter;
-}
-
-#gdrivebox span {
-	font-size: 0.9em;
-	display: none;
 }
 
 

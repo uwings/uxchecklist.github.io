@@ -57,22 +57,28 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 
 	<div id="header" class="">
-		<div id="title">
-			<h1>UX Project Checklist</h1>
-		</div>
 		<div id="gdrivebox" class="hide-for-print">
-			<span id="signin-do">
-				<button id="signin"><i class="fa fa-sign-in"></i>Sign in with Google</button> to sync across devices.
-				<a href="#signin-info" class="open-popup-link">
-				<i class="fa fa-info-circle fa-lg"></i></a>
-			</span>
-			<span id="signin-failed">Sign in failed! :(</span>
-			<span id="signin-success">
-				You're signed in with Google.
-				Project:<select id="file-list"></select>
-				<button id="file-rename">Rename</button>
-				<button id="file-share">Share</button>
-			</span>
+			<div id="signin-do">
+				<div class="left">
+					<h1>UX Project Checklist</h1>
+				</div>
+				<div class="right">
+					<button id="signin"><i class="fa fa-sign-in" /></i>Sign in with Google</button> to sync across devices.
+					<a href="#signin-info" class="open-popup-link">
+					<i class="fa fa-info-circle fa-lg"></i></a>
+				</div>
+			</div>
+			<div id="signin-failed" class="hide">Sign in failed! :(</div>
+			<div id="signin-success" class="hide">
+				<div id="project" class="left">
+					<i class="fa fa-bars fa-2x" /></i>
+					<h1></h1>
+					<select id="file-list"></select>
+					<a href="javascript.void();" id="file-rename"><i class="fa fa-edit" /></i>Rename</a>
+					<a href="javascript.void();" id="file-share"><i class="fa fa-share" /></i>Share</a>
+				</div>
+				<div class="right">Signed in</div>
+			</div>
 			<div id="signin-info" class="white-popup mfp-hide">
 				<p>We use Google Drive to create and save a file on your account so you will be able to open the same checklist on all your connected devices.
 				</p>
@@ -89,26 +95,23 @@
 				</p>
 			</div>
 		</div>
-		<div id="sharebox" class="hide-for-print">
+		<!-- <div id="sharebox" class="hide-for-print">
 			<ul>
 				<li>
-					<!-- facebook plugin -->
 					<div class="fb-like" data-href="http://uxchecklist.github.io/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 				</li>
 				<li>
-					<!-- linkedin plugin -->
 					<script src="//platform.linkedin.com/in.js" type="text/javascript">
 					  lang: en_US
 					</script>
 					<script type="IN/Share" data-counter="right"></script>
 				</li>
 				<li>
-					<!-- twitter plugin -->
 					<a href="https://twitter.com/share" class="twitter-share-button" data-text="UX Project Checklist: The UX Design Process From A to Z" data-via="sovesove" data-hashtags="ux,uxchecklist">Tweet</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 				</li>
 			</ul>
-		</div>
+		</div> -->
 	</div>
 	
 	<form id="checklist-form" method="POST">
@@ -614,6 +617,7 @@
 					newTitle = defaultTitle + (++titleCounter);
 				}
 				log(newTitle);
+				$("#project h1").text(selectedTitle);
 				$(e).empty();
 				$(titles).each(function(_, title) {
 					var selected = title == selectedTitle ? "selected" : "";
@@ -634,6 +638,7 @@
 						ga('send', 'event', 'rename', 'rename', 'rename');
 						controller.rename(newTitle, function(newTitle){
 							window.location.href = '?title=' + newTitle;
+							//jQuery.ajax( url [, settings ] )
 						});
 					} 
 				});
