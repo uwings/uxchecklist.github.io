@@ -12,7 +12,7 @@
 
  	function hasParentClass( e, classname ) {
 		if(e === document) return false;
-		if( classie.has( e, classname ) ) {
+		if( $(e).hasClass(classname) ) {
 			return true;
 		}
 		return e.parentNode && hasParentClass( e.parentNode, classname );
@@ -32,7 +32,7 @@
 			// event type (if mobile use touch events)
 			eventtype = mobilecheck() ? 'touchstart' : 'click',
 			resetMenu = function() {
-				classie.remove( container, 'st-menu-open' );
+				$(container).removeClass('st-menu-open');
 			},
 			bodyClickFn = function(evt) {
 				if( !hasParentClass( evt.target, 'st-menu' ) ) {
@@ -48,9 +48,9 @@
 				ev.stopPropagation();
 				ev.preventDefault();
 				container.className = 'st-container'; // clear
-				classie.add( container, effect );
+				$(container).addClass(effect);
 				setTimeout( function() {
-					classie.add( container, 'st-menu-open' );
+					$(container).addClass( 'st-menu-open' );
 				}, 25 );
 				document.addEventListener( eventtype, bodyClickFn );
 			});
