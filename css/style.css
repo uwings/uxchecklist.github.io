@@ -191,6 +191,10 @@ small {
     flex-wrap: wrap;
 }
 
+#signin-do {
+    justify-content: center;
+}
+
 #project {
     display: flex;
     align-items: baseline;
@@ -338,6 +342,10 @@ small {
 @media (min-width: 1024px) {
 	body {
 
+	}	
+
+	#signin-do {
+	    justify-content: space-between;
 	}
 
 	.row {
