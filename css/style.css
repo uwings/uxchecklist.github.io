@@ -127,17 +127,20 @@ button i,
 
 #header {
 	position: fixed;
-    padding: 10px;
+    padding: 16px;
     box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
     background: #FFF;
     width: 100%;
     z-index: 1;
     height: 60px;
     margin: 0;
+    text-align: center;
 }
 #header h1 {
 	display: inline-block;
-	padding: 5px;
+	font-size: 1.3em;
+    text-transform: capitalize;
+	margin: 0 20px;
 }
 #header a {
 	color: #2d70dc;
@@ -152,13 +155,18 @@ small {
 	font-size: 0.7em;
 }
 
+#sharebox {
+	display: inline-block;
+    margin: 10px auto;
+}
+
 #sharebox ul li {
 	display: inline-block;
 	vertical-align: top
 }
 
 #gdrivebox {
-	margin-bottom: 10px;
+	overflow: hidden;
 }
 
 #checklist-form {

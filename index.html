@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="css/magnific-popup.css"> 
 
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/component.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	<!-- <script src="js/vendor/modernizr.js"></script> -->
@@ -56,7 +57,25 @@
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
-	<div id="header" class="">
+<div id="st-container" class="st-container">
+
+
+	<!-- content push wrapper -->
+	<div class="st-pusher">
+		<!-- 	
+			example menus 
+			these menus will be under the push wrapper
+		-->
+		<nav class="st-menu st-effect-3" id="menu-3">
+			<h2 class="icon icon-lab">Projects</h2>
+			<ul id="file-list"></ul>
+		</nav>
+
+		<div class="st-content"><!-- this is the wrapper for the content -->
+			<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+
+
+	<div id="header">
 		<div id="gdrivebox" class="hide-for-print">
 			<div id="signin-do">
 				<div class="left">
@@ -71,11 +90,11 @@
 			<div id="signin-failed" class="hide">Sign in failed! :(</div>
 			<div id="signin-success" class="hide">
 				<div id="project" class="left">
-					<i class="fa fa-bars fa-2x" /></i>
+					<i id="sideMenuBtn" class="fa fa-bars fa-2x" data-effect="st-effect-3" /></i>
 					<h1></h1>
-					<select id="file-list"></select>
-					<a href="javascript.void();" id="file-rename"><i class="fa fa-edit" /></i>Rename</a>
-					<a href="javascript.void();" id="file-share"><i class="fa fa-share" /></i>Share</a>
+					<!-- <select id="file-list"></select> -->
+					<a href="javascript:void(0);" id="file-rename">Rename</a>
+					<a href="javascript:void(0);" id="file-share">Share</a>
 				</div>
 				<div class="right">Signed in</div>
 			</div>
@@ -94,24 +113,24 @@
 				Oh, and just want to remind you that if you still not believe it, everything is open source and you can check the github repo <a href="https://github.com/uxchecklist/uxchecklist.github.io" target="_blank" title="github repo">here</a> (feel free to fork it and do awesome things, or help us make it better).
 				</p>
 			</div>
+			<div id="sharebox" class="hide-for-print">
+				<ul>
+					<li>
+						<div class="fb-like" data-href="http://uxchecklist.github.io/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					</li>
+					<li>
+						<script src="//platform.linkedin.com/in.js" type="text/javascript">
+						  lang: en_US
+						</script>
+						<script type="IN/Share" data-counter="right"></script>
+					</li>
+					<li>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-text="UX Project Checklist: The UX Design Process From A to Z" data-via="sovesove" data-hashtags="ux,uxchecklist">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<!-- <div id="sharebox" class="hide-for-print">
-			<ul>
-				<li>
-					<div class="fb-like" data-href="http://uxchecklist.github.io/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-				</li>
-				<li>
-					<script src="//platform.linkedin.com/in.js" type="text/javascript">
-					  lang: en_US
-					</script>
-					<script type="IN/Share" data-counter="right"></script>
-				</li>
-				<li>
-					<a href="https://twitter.com/share" class="twitter-share-button" data-text="UX Project Checklist: The UX Design Process From A to Z" data-via="sovesove" data-hashtags="ux,uxchecklist">Tweet</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-				</li>
-			</ul>
-		</div> -->
 	</div>
 	
 	<form id="checklist-form" method="POST">
@@ -493,21 +512,20 @@
 		</div>
 
 		<div class="hide-for-print clearfix">
-<!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="//github.us9.list-manage.com/subscribe/post?u=08f46baa146402de6c0fd5ce1&amp;id=fefa7a6868" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<label for="mce-EMAIL">We are working to make this better. Sign up for updates!</label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_08f46baa146402de6c0fd5ce1_fefa7a6868" tabindex="-1" value=""></div>
-    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-    </div>
-</form>
-</div>
-
-<!--End mc_embed_signup-->
-	</div>
+			<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+			<form action="//github.us9.list-manage.com/subscribe/post?u=08f46baa146402de6c0fd5ce1&amp;id=fefa7a6868" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			    <div id="mc_embed_signup_scroll">
+				<label for="mce-EMAIL">We are working to make this better. Sign up for updates!</label>
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+			    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			    <div style="position: absolute; left: -5000px;"><input type="text" name="b_08f46baa146402de6c0fd5ce1_fefa7a6868" tabindex="-1" value=""></div>
+			    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+			    </div>
+			</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
 
 		<div class="hide-for-print clearfix">
 			<a class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank" title="give some feedback!"><i class="fa fa-comment-o"></i>Do you like that?</a>
@@ -534,8 +552,10 @@
 		</div>
 	</div>
 
-
-
+			</div><!-- /st-content-inner -->
+		</div><!-- /st-content -->
+	</div><!-- /st-pusher -->
+</div><!-- /st-container -->
 
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -621,14 +641,14 @@
 				$(e).empty();
 				$(titles).each(function(_, title) {
 					var selected = title == selectedTitle ? "selected" : "";
-					$(e).append("<option value='" + title + "' " + selected + ">" + title + "</option>");
+					$(e).append("<li data-title='" + title + "' class='" + selected + "'><a href='javascript:void(0)'>" + title + "</a></li>");
 				});
-			    $(e).append("<option value='" + newTitle + "'>New Project</option>");
+			    $(e).append("<li data-title='" + newTitle + "'><a href='javascript:void(0)'>New Project</a></li>");
 				
-				$(e).change(function () {
+				$('a', e).click(function () {
 					ga('send', 'event', 'file', 'change', 'file');
-					var selected = $(this).find("option:selected");
-					window.location.href = '?title=' + selected.val();
+					//var selected = $(this).find("class:selected");
+					window.location.href = '?title=' + $(this).text();
 				});
 				
 				$('#file-rename').on('click', function() {
@@ -698,6 +718,7 @@
 					$("#reset").on('click', function(){
 						controller.save();
 					});
+					$('#sharebox').appendTo('#signin-success');
 				};
 
 				var signinFailed = function() {
@@ -723,6 +744,9 @@
 			});
 		});
 	</script>
+
+	<script type="text/javascript" src="js/classie.js"></script>
+	<script type="text/javascript" src="js/sidebarEffects.js"></script>
 	<script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
 	<script type="text/javascript" src="js/realtime.js"></script>
 </body>
