@@ -50,36 +50,38 @@ Realtime.Controller.prototype.loaded = function(result) {
   for (var i=0; i < keys.length; i++) {
     var key = keys[i];
     var val = this.uxchecklist.checkboxes.get(key);
-    this.log("loaded " + key + " as " + val);
+    //this.log("loaded " + key + " as " + val);
     this.view.checkboxes[key].setChecked(val);
   }
   this.log("ready!");
+  $('#overlay').fadeOut();
 };
 
 Realtime.Controller.prototype.onCheckBoxChange = function(key) {
   var value = this.view.checkboxes[key].isChecked();
-  this.log("saved " + key + " as " + value);
+  //this.log("saved " + key + " as " + value);
   this.uxchecklist.checkboxes.set(key, value);
 };
 
 Realtime.Controller.prototype.start = function(title, ids, defaultTitle) {
+  $('#overlay').fadeIn();
   var self = this;
   if (ids) {
     self.fileId = ids;
-    self.open(ids);
+    self.open(ids, title);
   } else {
     this.listFiles(function (files){
       title = title || (files.length > 0 ? files[0].title : defaultTitle);
       log(title);
       self.openFile(title, function (file) {
         self.fileId = file.id;
-        self.open(file.id);
+        self.open(file.id, title);
       });
     });
   }
 };
 
-Realtime.Controller.prototype.open = function(id) {
+Realtime.Controller.prototype.open = function(id, title) {
   var self = this;
   self.fileId = id;
   gapi.drive.realtime.load(id,
@@ -95,6 +97,8 @@ Realtime.Controller.prototype.open = function(id) {
         });
     },
     function(model) { self.initializeModel(model, false); });
+
+    history.pushState({}, title, '?title=' + title);
 };
 
 Realtime.Controller.prototype.initializeModel = function(model) {
@@ -112,11 +116,12 @@ Realtime.Controller.prototype.save = function(uxchecklist) {
     var cb = this.view.checkboxes[key];
     var value = cb.isChecked();
     uxchecklist.checkboxes.set(key, value);
-    this.log("saved " + key + " as " + value);
+    //this.log("saved " + key + " as " + value);
   }
 };
 
 Realtime.Controller.prototype.rename = function(newTitle, success) {
+  $('#overlay').fadeIn();
   var body = {'title': newTitle};
   var request = gapi.client.drive.files.patch({
     'fileId': this.fileId,
@@ -134,14 +139,14 @@ Realtime.Controller.prototype.init = function() {
   Realtime.Model.UxCheckList.prototype.checkboxes = gapi.drive.realtime.custom.collaborativeField('checkboxes');
 };
 
-Realtime.Controller.prototype.auth = function(immediate, success, fail, title, defaultTitle) {
+Realtime.Controller.prototype.auth = function(immediate, success, fail, title, ids, defaultTitle) {
   var self = this;
   gapi.auth.authorize({
     'client_id': '939842792990-97uqc8rc3h645k65ecd4j7p3u0al17aj.apps.googleusercontent.com',
     'scope': 'https://www.googleapis.com/auth/drive.install https://www.googleapis.com/auth/drive.file email profile',
     'immediate': immediate, 
     'cookie_policy': 'single_host_origin'
-  }, function(r) { console.log(r); self.checkAuth(r, success, fail, title, defaultTitle); });
+  }, function(r) { console.log(r); self.checkAuth(r, success, fail, title, ids, defaultTitle); });
 };
 
 Realtime.Controller.prototype.checkAuth = function(authResult, success, fail, title, ids, defaultTitle) {
@@ -176,6 +181,41 @@ Realtime.Controller.prototype.openFile = function(title, callback) {
         }
       });
   });
+};
+
+Realtime.Controller.prototype.deleteFile = function(id, callback) {
+  var self = this;
+  var id = id ? id : self.fileId;
+  self.log("delete");
+  gapi.client.drive.files.delete({
+    'fileId': self.fileId
+  })
+  // .execute(function(f){
+  //     gapi.client.drive.files.list({'q': "title = '" + title + "' and trashed = false" })
+  //       .execute(function(r){
+  //         self.log(r);
+  //       })
+  // })
+  .execute(callback);
+
+
+  // gapi.client.load('drive', 'v2', function () {
+  //   var mimeType = 'application/vnd.google-apps.drive-sdk';
+  //   gapi.client.drive.files.list({'q': "title = '" + title + "' and trashed = false" })
+  //     .execute(function(r){
+  //       self.log(r);
+  //       if (!r || r.items.length < 1) {
+  //         self.log("delete");
+  //         gapi.client.drive.files.delete({
+  //           'fileId': self.fileId
+  //         }).execute(callback);
+  //       } else {
+  //         var file = r.items[0];
+  //         self.log(file);
+  //         callback(file);
+  //       }
+  //     });
+  // });
 };
 
 Realtime.Controller.prototype.listFiles = function(callback) {

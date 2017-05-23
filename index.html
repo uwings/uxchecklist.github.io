@@ -47,7 +47,7 @@
 	</script>
 </head>
 <body>
-
+	<div id="overlay"></div>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
@@ -109,6 +109,7 @@
 					<h1></h1>
 					<!-- <select id="file-list"></select> -->
 					<a href="javascript:void(0);" id="file-rename">Rename</a>
+					<a href="javascript:void(0);" id="file-delete">Delete</a>
 					<!-- <a href="javascript:void(0);" id="file-share">Share</a> -->
 				</div>
 			</div>
@@ -638,28 +639,22 @@
 				$(e).empty();
 				$(titles).each(function(_, title) {
 					var selected = title == selectedTitle ? "selected" : "";
-					$(e).append("<li data-title='" + title + "' class='" + selected + "'><a href='javascript:void(0)'>" + title + "</a></li>");
+					$(e).append("<li class='" + selected + "'><a href='javascript:void(0)' data-title='" + title + "'>" + title + "</a></li>");
 				});
-			    $(e).append("<li data-title='" + newTitle + "'><a href='javascript:void(0)'>New Project</a></li>");
+			    $(e).append("<li><a id='newPrj' data-title='" + newTitle + "'href='javascript:void(0)'>New Project</a></li>");
 				
 				$('a', e).click(function () {
 					ga('send', 'event', 'file', 'change', 'file');
-					//var selected = $(this).find("class:selected");
-					window.location.href = '?title=' + $(this).text();
-				});
-				
-				$('#file-rename').on('click', function() {
-					ga('send', 'event', 'rename', 'click', 'rename');
-					var newTitle = prompt("new file name:", selectedTitle);
-					if (newTitle) {
-						ga('send', 'event', 'rename', 'rename', 'rename');
-						controller.rename(newTitle, function(newTitle){
-							window.location.href = '?title=' + newTitle;
-							//jQuery.ajax( url [, settings ] )
+					var title = $(this).attr('data-title');
+					$(".st-content").trigger("click");
+					if (title === newTitle) {
+						$('input:checkbox').each(function() {
+							$(this).prop('checked', false);
 						});
-					} 
+					}
+					controller.start(title);
 				});
-				
+
 				gapi.load('drive-share', function() {
 					var shareClient = new gapi.drive.share.ShareClient('<YOUR_APP_ID>');
         			shareClient.setItemIds([fileId]);
@@ -669,7 +664,31 @@
 					});
 				});
 			}
-			
+
+			$('#file-rename').on('click', function() {
+				ga('send', 'event', 'rename', 'click', 'rename');
+				var newTitle = prompt("new file name:", view.fileList.selectedTitle);
+				if (newTitle) {
+					ga('send', 'event', 'rename', 'rename', 'rename');
+					controller.rename(newTitle, function(newTitle){
+						controller.start(newTitle);
+						//window.location.href = '?title=' + newTitle;
+						//jQuery.ajax( url [, settings ] )
+					});
+				} 
+			});
+		
+			$("#file-delete").on('click', function(){
+
+				if (confirm('Are you sure you want to delete this project? \nThere\'s no undo.')){
+					controller.deleteFile(null, function(){
+						//window.location.href = "/";
+
+						controller.start("","", defaultTitle);
+					});
+				}
+			})
+				
 			var fileList = new Realtime.Model.FileList($('#file-list'), setTitles);
 			var isFn = function(id, e) { return $(e).is(':checked'); };
 			var setFn = function(id, e, val) {
