@@ -80,6 +80,11 @@ p {
 	margin: 20px auto;
 }
 
+.white-popup button:hover {
+	background-color: transparent !important;
+}
+
+
 button,
 .button {
 	border-radius: 5px;
