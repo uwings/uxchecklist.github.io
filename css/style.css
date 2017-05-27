@@ -80,6 +80,21 @@ p {
 	margin: 20px auto;
 }
 
+.white-popup h2 {
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.2em;
+	margin: 8px auto;
+}
+
+.white-popup a {
+	margin-right: 16px;
+}
+
+.white-popup #confirm-delete {
+	color: #e61313;
+}
+
 .white-popup button:hover {
 	background-color: transparent !important;
 }
