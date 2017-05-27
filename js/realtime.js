@@ -121,7 +121,6 @@ Realtime.Controller.prototype.save = function(uxchecklist) {
 };
 
 Realtime.Controller.prototype.rename = function(newTitle, success) {
-  $('#overlay').fadeIn();
   var body = {'title': newTitle};
   var request = gapi.client.drive.files.patch({
     'fileId': this.fileId,

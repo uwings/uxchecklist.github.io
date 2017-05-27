@@ -35,9 +35,20 @@ $(document).ready(function(){
 		callbacks: {
 			open: function() {
 				ga('send', 'event', 'popup', 'open', $(this.content).attr('id'));
+				if ($(this)[0].currItem.src === "#delete-modal") {
+					$('body').on('keydown', function(e) {
+						var code = e.keyCode || e.which;
+						if(code == 13) { //Enter keycode
+							$("#confirm-delete").trigger("click");
+						}
+					});
+				}
 			},
 			close: function() {
 				ga('send', 'event', 'popup', 'close', $(this.content).attr('id'));
+				if ($(this)[0].currItem.src === "#delete-modal") {
+					$('body').off('keydown');
+				}
 			}
 		}
 	});
@@ -54,6 +65,13 @@ var controller = null;
 var log = (document.location.hostname == "localhost" && Function.prototype.bind)
 	? Function.prototype.bind.call(console.log, console)
 	: function() {};
+
+var renameProject = function(newTitle) {
+	ga('send', 'event', 'rename', 'rename', 'rename');
+	controller.rename(newTitle, function(newTitle){
+		controller.start(newTitle);
+	});
+};
 
 $().ready(function(){
 	var setTitles = function(titles, selectedTitle, fileId, e) {
@@ -97,14 +115,42 @@ $().ready(function(){
 		});
 	}
 
-	$('#confirm-rename').on('click', function() {
-		ga('send', 'event', 'rename', 'click', 'rename');
-		if (newTitle) {
-			ga('send', 'event', 'rename', 'rename', 'rename');
-			controller.rename(newTitle, function(newTitle){
-				controller.start(newTitle);
-			});
-		} 
+	$('#file-rename').on('click', function(e) {
+		ga('send', 'event', 'rename', 'click', 'show');
+		var inputField = $('#rename-input');
+		$('#project-title').hide();
+		inputField.val($("#project-title").text());
+		inputField.show();
+		inputField.focus();
+		inputField.select()
+	});
+
+	$('#rename-input').on('blur', function(e) {
+		$('#rename-input').hide();
+		$('#project-title').show();
+	});
+
+	$('#rename-input').on('keydown', function(e) {
+		ga('send', 'event', 'rename', 'click', 'submit');
+
+		var code = e.keyCode || e.which;
+		if(code == 13) { //Enter keycode
+			var newTitle = $(this).val();
+			if (newTitle !== $("#project-title").text() ) {
+				$('#rename-input').hide();
+				$('#project-title').show();
+				$("#project-title").text(newTitle);
+				renameProject(newTitle);
+			} else {
+				$('#rename-input').hide();
+				$('#project-title').show();
+			}
+		}
+
+		if(code == 27) { //Esc keycode
+			$('#rename-input').hide();
+			$('#project-title').show();
+		}
 	});
 
 	$("#cancel-delete").on('click', function(){

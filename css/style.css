@@ -84,7 +84,8 @@ p {
 	text-align: center;
 	font-weight: 600;
 	font-size: 1.2em;
-	margin: 8px auto;
+	margin-top: 8px;
+	margin-bottom: 16px;
 }
 
 .white-popup a {
@@ -237,6 +238,15 @@ small {
     display: flex;
     align-items: baseline;
 	margin: 8px 0;
+}
+
+#rename-input {
+	display: flex;
+	font-size: 1.3em;
+	font-family: 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: lighter;
+	margin-right: 16px;
+	text-transform: capitalize;
 }
 
 #sharebox {
