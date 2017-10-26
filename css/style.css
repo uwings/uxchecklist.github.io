@@ -94,6 +94,12 @@ button,
 	text-decoration: none;
 	border-bottom: none;
 }
+.mfp-close:hover {
+	color: #fff;
+}
+.mfp-close:active {
+	top: 0;
+}
 button i,
 .button i {
 	margin-right: 10px;
