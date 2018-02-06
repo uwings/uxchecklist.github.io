@@ -115,7 +115,7 @@ $().ready(function(){
 		});
 	}
 
-	$('#file-rename').on('click', function(e) {
+	$('#project-title').on('click', function(e) {
 		ga('send', 'event', 'rename', 'click', 'show');
 		var inputField = $('#rename-input');
 		$('#project-title').hide();
