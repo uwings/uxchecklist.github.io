@@ -93,7 +93,7 @@ $().ready(function(){
 		});
 	    $(e).append("<li><a id='newPrj' data-title='" + newTitle + "'href='javascript:void(0)'>+ New Project</a></li>");
 		
-		$('nav a', e).click(function () {
+		$('a', e).click(function () {
 			ga('send', 'event', 'file', 'change', 'file');
 			var title = $(this).attr('data-title');
 			$(".st-content").trigger("click");
