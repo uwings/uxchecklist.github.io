@@ -91,9 +91,9 @@ $().ready(function(){
 			var selected = title == selectedTitle ? "selected" : "";
 			$(e).append("<li class='" + selected + "'><a href='javascript:void(0)' data-title='" + title + "'>" + title + "</a></li>");
 		});
-	    $(e).append("<li><a id='newPrj' data-title='" + newTitle + "'href='javascript:void(0)'>New Project</a></li>");
+	    $(e).append("<li><a id='newPrj' data-title='" + newTitle + "'href='javascript:void(0)'>+ New Project</a></li>");
 		
-		$('a', e).click(function () {
+		$('nav a', e).click(function () {
 			ga('send', 'event', 'file', 'change', 'file');
 			var title = $(this).attr('data-title');
 			$(".st-content").trigger("click");
