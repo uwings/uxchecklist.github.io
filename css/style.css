@@ -94,10 +94,10 @@ button,
 	text-decoration: none;
 	border-bottom: none;
 }
-.mfp-close:hover {
+.no-touch .mfp-close:hover {
 	color: #fff;
 }
-.mfp-close:active {
+.no-touch .mfp-close:active {
 	top: 0;
 }
 button i,
