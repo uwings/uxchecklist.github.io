@@ -88,9 +88,9 @@ p {
 	margin-bottom: 16px;
 }
 
-.white-popup a {
+/* .white-popup a {
 	margin-right: 16px;
-}
+} */
 
 .white-popup #confirm-delete {
 	color: #e61313;
@@ -118,9 +118,9 @@ button,
 	text-decoration: none;
 	border-bottom: none;
 }
-.mfp-close:hover {
+/* .mfp-close:hover {
 	color: #fff;
-}
+} */
 .mfp-close:active {
 	top: 0;
 }
@@ -129,9 +129,9 @@ button i,
 	margin-right: 10px;
 	color: #FFF;
 }
-.no-touch a:hover i {
+/* .no-touch a:hover i {
 	color: #FFF;
-}
+} */
 /* #reset {
 	background-color: transparent;
 	border: 1px solid #DF5941;
@@ -140,7 +140,7 @@ button i,
 #reset i {
 	color: inherit;
 }
-.no-touch #reset:hover, #signin {
+#signin {
 	background-color: #DF5941;
 	color: #FFF;
 }
