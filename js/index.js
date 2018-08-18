@@ -216,6 +216,9 @@ $().ready(function(){
 		var signinFailed = function() {
 			$('#signin-fail').show();
 			$('#header').removeClass('loading');
+			$("#checklist-form").garlic();
+			useGarlic = true;
+			log("Local storage enabled");
 		};
 		
 		controller.auth(true,
