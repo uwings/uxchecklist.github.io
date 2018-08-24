@@ -24,13 +24,13 @@
     color: #FFF;
 }
 
-
 #mc_embed_signup label {
     width: 100%;
     text-align: center;
     display: block;
     margin-bottom: 10px;
 }
+
 #mc_embed_signup input {
     border: 1px solid $borderSignupColor;
     -webkit-appearance: none;
@@ -49,13 +49,10 @@
     }
 }
 
-
-
 #sharebox ul li {
     display: inline-block;
-    vertical-align: top
+    vertical-align: top;
 }
-
 
 #mc_embed_signup,
 #credits,
@@ -68,11 +65,27 @@
     font-size: 0.8em;
 }
 
-
-
 .no-touch .mfp-close:hover {
     color: $white;
 }
+
 .no-touch .mfp-close:active {
     top: 0;
+}
+
+.wrapper--patreon-button {
+    display: block;
+    width: 100%;
+    max-width: 198px;
+    text-align: center;
+    margin: 2rem auto 3rem;
+    height: 40px;
+    z-index: 2;
+
+    @media (min-width: 1024px) {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        text-align: right;
+    }
 }
