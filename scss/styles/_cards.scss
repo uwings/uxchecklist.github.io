@@ -1,0 +1,59 @@
+.cards {
+    border: 1px solid $cardBorderColor;
+    padding: 20px;
+    padding: 1.25rem;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+.cards div.img {
+    margin-bottom: 10px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.cards .img img {
+    width: 64px;
+    height: 64px;
+}
+
+.cards .right {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.card-content {
+    padding: 0 10px;
+    -webkit-box-flex: 3;
+    -webkit-flex-grow: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3;
+}
+
+.card-content label {
+    display: block;
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    line-height: normal;
+    padding-right: 10px;
+}

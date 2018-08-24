@@ -1,0 +1,78 @@
+#footer .typeform-share {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: $blue;
+    color: white;
+    font-size: 0.9em;
+    line-height: normal;
+    padding: 5px 10px;
+    margin-left: 10px;
+    text-decoration: none !important;
+    border-bottom: none;
+}
+
+.no-touch #footer .typeform-share:hover {
+    background-color: $blueLight;
+}
+
+.fb_iframe_widget span {
+    vertical-align: top !important;
+}
+
+#github {
+    background-color: #999;
+    color: #FFF;
+}
+
+
+#mc_embed_signup label {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
+#mc_embed_signup input {
+    border: 1px solid $borderSignupColor;
+    -webkit-appearance: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: lighter;
+}
+
+#gdrivebox {
+    margin-bottom: 10px;
+
+    span {
+        font-size: 0.9em;
+        display: none;
+    }
+}
+
+
+
+#sharebox ul li {
+    display: inline-block;
+    vertical-align: top
+}
+
+
+#mc_embed_signup,
+#credits,
+#toolbar {
+    margin-bottom: 20px;
+}
+
+#inspiredby {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+
+
+.no-touch .mfp-close:hover {
+    color: $white;
+}
+.no-touch .mfp-close:active {
+    top: 0;
+}
