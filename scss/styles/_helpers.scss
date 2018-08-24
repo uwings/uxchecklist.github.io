@@ -27,12 +27,20 @@
     float: right;
 }
 
-.rotate {
+@mixin rotate(){
+    /* Rotate from top left corner (not default) */
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;    
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.rotate {
+    @include rotate();
 }
 
 /**
