@@ -44,6 +44,31 @@ gulp.task('scss', function() {
     .pipe(gulp.dest('dist/css'))
 });
 
+gulp.task('scssLight', function() {
+    var onError = function(err) {
+      notify.onError({
+          title:    "Gulp",
+          subtitle: "Failure!",
+          message:  "Error: <%= error.message %>",
+          sound:    "Beep"
+      })(err);
+      this.emit('end');
+  };
+
+  return gulp.src('scss/style.scss')
+    .pipe(plumber({errorHandler: onError}))
+    .pipe(sass())
+    .pipe(size({ gzip: true, showFiles: true }))
+    .pipe(prefix())
+    // .pipe(rename('style.css'))
+    .pipe(gulp.dest('css/'))
+    .pipe(reload({stream:true}))
+    .pipe(cssmin())
+    .pipe(size({ gzip: true, showFiles: true }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('css/'))
+});
+
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
@@ -97,6 +122,11 @@ gulp.task('watch', function() {
   gulp.watch('img/**/*', ['imgmin']);
 });
 
+
+gulp.task('watchSass', function() {
+  gulp.watch('scss/**/*.scss', ['scss']);
+});
+
 gulp.task('imgmin', function () {
     return gulp.src('img/**/*')
         .pipe(imagemin({
@@ -107,4 +137,5 @@ gulp.task('imgmin', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', ['browser-sync', 'js', 'imgmin', 'minify-html', 'scss', 'watch']);
+gulp.task('dist', ['browser-sync', 'js', 'imgmin', 'minify-html', 'scss', 'watch']);
+gulp.task('default', ['scssLight', 'watchSass']);
