@@ -34,6 +34,56 @@ What's set up here:
 7. In the terminal 2, enter `http-server` to serve your site (probably at http://localhost:8080)
 
 
+## DEV Single and Multi projects
+
+### HTML
+- index-multi.html
+- index-single.html
+
+On deployment: copy index-multi.html or index-single.html into index.html and push to master
+
+### Styles
+There is class `.body-multi` and `.body-single` on `<body>` so you can target styles separately when needed
+This Way they can share SCSS/CSS
+
+**The CSS way** :
+
+```
+
+#reset {
+    font-size: 1rem
+}
+
+.body-multi #reset {
+    border: none;
+}
+
+.body-single #reset {
+    color: red;
+}
+
+```
+
+**The SCSS way** :
+
+```
+#reset {
+	font-size: 1rem;
+
+    .body-single & {
+        color: red;
+    }
+
+    .body-multi & {
+        border: none;
+    }
+}
+
+```
+
+## Release
+Features that have the class '.not-released' are hidden until the class is removed.
+This can be done from the html file locally or even directly from github.
 
 
 ---
