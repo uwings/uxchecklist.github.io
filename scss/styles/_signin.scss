@@ -1,0 +1,61 @@
+
+
+#signin-success, #signin-do, #signin-failed {
+	height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#signin-do {
+    justify-content: center;
+}
+
+#project {
+    display: flex;
+    align-items: baseline;
+	margin: 8px 0;
+}
+
+#rename-input {
+	display: flex;
+	font-size: 1.3em;
+	font-family: 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: lighter;
+	margin-right: 16px;
+	text-transform: capitalize;
+}
+
+#sharebox {
+	display: flex;
+	align-items: center;
+	margin: 8px 0;
+	padding-top: 8px;
+}
+
+#sharebox ul li {
+	display: inline-block;
+	vertical-align: top
+}
+
+#gdrivebox {
+	flex-grow: 1;
+}
+
+#newPrj {
+    margin: 18px 16px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+    color: rgba(255,255,255,0.8);
+    font-weight: 300;
+    box-shadow: none;
+}
+
+#newPrj:hover {
+    background: rgb(46, 115, 75);
+}
+
+#checklist-form {
+	margin-bottom: 50px;
+}
