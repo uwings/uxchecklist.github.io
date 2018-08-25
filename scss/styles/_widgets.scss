@@ -73,9 +73,10 @@
     top: 0;
 }
 
-.support-us-wrapper{
+.support-us-wrapper {
     z-index: 2;
     margin: 2rem auto 3rem;
+
     @media (min-width: 1024px) {
         position: fixed;
         top: 0;
@@ -84,7 +85,7 @@
     }
 }
 
-.wrapper--paypal-button{
+.wrapper--paypal-button {
     text-align: center;
 }
 
@@ -94,5 +95,10 @@
     max-width: 198px;
     text-align: center;
     height: 40px;
-    // margin: 1rem auto 1rem;
+
+    @media (min-width: 1024px) {
+        .body-multi & {
+            margin-top: -0.75rem;
+        }
+    }
 }

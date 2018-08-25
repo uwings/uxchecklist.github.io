@@ -109,13 +109,17 @@
                 </li>
             </ul>
         </div>
-        <div class="support-us-wrapper">
+        <div class="support-us-wrapper hide-for-print">
             <!-- PayPal donate button -->
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="CZJKKFXRARWJL">
-                <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1"> </form>
-            <!-- PayPal donate button END -->            
+            <div class="wrapper--paypal-button hide-for-print">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="CZJKKFXRARWJL">
+                    <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1"> 
+                </form>
+            </div>
+
+            <!-- PayPal donate button END -->                                    
             <!-- Patreon -->
             <div class="wrapper--patreon-button hide-for-print not-released">
                 <iframe src="/widgets/patreon.html" frameborder="0" height="auto" scrolling="no" width="100%"></iframe>

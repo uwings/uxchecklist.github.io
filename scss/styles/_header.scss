@@ -1,0 +1,60 @@
+
+#header {
+	display: flex;
+	flex-wrap: wrap;
+    padding: 4px 16px;
+    box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+    background: #FFF;
+    width: 100%;
+    z-index: 1;
+    min-height: 60px;
+}
+
+#header.loading {
+	background: linear-gradient(270deg, #efefef, #ffffff);
+	background-size: 200% 200%;
+
+	-webkit-animation: AnimationName 2s ease infinite;
+	-moz-animation: AnimationName 2s ease infinite;
+	animation: AnimationName 2s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#header h1 {
+	display: flex;
+	font-size: 1.3em;
+    text-transform: capitalize;
+    margin-right:  16px;
+}
+#header a {
+	color: #2d70dc;
+    font-size: 0.8em;
+    margin-right: 16px;
+}
+#header #signin-success i {
+	float: left;
+	margin-right: 16px;
+    color: #2d70dc;
+    cursor: pointer;
+}
+
+#reset {
+    .body-multi & {
+        border: none;
+    }
+}

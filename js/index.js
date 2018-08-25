@@ -204,6 +204,7 @@ $().ready(function(){
 
 		var signinSuccess = function() {
 			$('#signin-do').hide();
+			$('.signin-do').hide();
 			$('#signin-fail').hide();
 			$('#signin-success').show();
 			$("#reset").on('click', function(){
@@ -225,6 +226,7 @@ $().ready(function(){
 			signinSuccess,
 			function(){
 				$('#signin-do').show();
+				$('.signin-do').show();
 				$('#header').removeClass('loading');
 				$("#checklist-form").garlic();
 				useGarlic = true;
