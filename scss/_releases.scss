@@ -1,0 +1,10 @@
+// RELEASES 
+
+// Comment / delete these and remove the class from index.html
+.row--love-hide {
+	@include hideUntilRelease();
+}
+
+.patreon-hide{
+	@include hideUntilRelease();
+}

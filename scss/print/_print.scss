@@ -1,0 +1,51 @@
+@media print {
+    @page {
+        margin: 0in;
+    }
+
+    body {
+        width: 100%;
+        margin: 0;
+        font-size: 0.7em;
+    }
+
+    .row {
+        text-align: center;
+    }
+
+    .cards {
+        float: none;
+        display: inline-block;
+        margin: 0;
+        width: 6cm;
+        height: 2.5cm;
+        text-align: left;
+        padding: 0;
+    }
+
+    .card-content label {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .card-content p {
+        font-size: 9px;
+        line-height: 11px;
+    }
+
+    input[type="checkbox"] {
+        display: block !important;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 20px;
+        width: 20px;
+    }
+
+    .hide-for-print,
+    .title,
+    .cards a,
+    .cards img {
+        display: none;
+    }
+}

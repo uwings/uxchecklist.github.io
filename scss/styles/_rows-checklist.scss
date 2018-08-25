@@ -1,0 +1,60 @@
+.title {
+    color: $white;
+    background: $blue;
+    padding: 0.8rem 1.25rem;
+}
+
+#title {
+    margin-bottom: 10px;
+}
+
+#titleIcon{
+    
+}
+
+
+#Research {
+    background: $ResearchColor;
+}
+
+#Plan {
+    background: $PlanColor;
+}
+
+#Explore {
+    background: $ExploreColor;
+}
+
+#Communicate {
+    background: $CommunicateColor;
+}
+
+#Love {
+    background: $LoveColor;
+
+    .fa{
+        color: red;
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+#Create {
+    background: $CreateColor;
+}
+
+#Feedbacks {
+    background: $FeedbacksColor;
+}
+
+#Finalise {
+    background: $FinaliseColor;
+}
+
+#Delight {
+    background: $DelightColor;
+}
+
+#Analyse {
+    background: $AnalyseColor;
+}

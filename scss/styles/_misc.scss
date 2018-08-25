@@ -1,0 +1,31 @@
+.fb_iframe_widget span {
+    vertical-align: top !important;
+}
+
+.no-touch .mfp-close:hover {
+    color: $white;
+}
+
+.no-touch .mfp-close:active {
+    top: 0;
+}
+
+#github {
+    background-color: $gray;
+    color: $white;
+}
+
+#sharebox ul li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#inspiredby {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+#gdrivebox span {
+    font-size: 0.9em;
+    display: none;
+}
