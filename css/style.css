@@ -771,6 +771,20 @@ button,
   max-width: 500px;
   margin: 20px auto; }
 
+#overlay {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  background: linear-gradient(45deg, #666666, #ffffff);
+  background-size: 400% 200%;
+  -webkit-animation: AnimationName 2s ease infinite;
+  animation: AnimationName 2s ease infinite; }
+
 .fb_iframe_widget span {
   vertical-align: top !important; }
 
@@ -883,6 +897,9 @@ input.labelauty + label > span.labelauty-checked-image {
   max-width: 198px;
   text-align: center;
   height: 40px; }
+  @media (min-width: 1024px) {
+    .body-multi .wrapper--patreon-button {
+      margin-top: -0.75rem; } }
 
 #signin-success, #signin-do, #signin-failed {
   height: 100%;
@@ -955,6 +972,69 @@ input.labelauty + label > span.labelauty-checked-image {
 
 #checklist-form {
   margin-bottom: 50px; }
+
+#gdrivebox span {
+  font-size: 0.9em;
+  display: none; }
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 4px 16px;
+  -webkit-box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+          box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+  background: #FFF;
+  width: 100%;
+  z-index: 1;
+  min-height: 60px; }
+
+#header.loading {
+  background: -webkit-gradient(linear, right top, left top, from(#efefef), to(#ffffff));
+  background: linear-gradient(270deg, #efefef, #ffffff);
+  background-size: 200% 200%;
+  -webkit-animation: AnimationName 2s ease infinite;
+  animation: AnimationName 2s ease infinite; }
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+#header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.3em;
+  text-transform: capitalize;
+  margin-right: 16px; }
+
+#header a {
+  color: #2d70dc;
+  font-size: 0.8em;
+  margin-right: 16px; }
+
+#header #signin-success i {
+  float: left;
+  margin-right: 16px;
+  color: #2d70dc;
+  cursor: pointer; }
+
+.body-multi #reset {
+  border: none; }
 
 @media (min-width: 1024px) {
   .row {
