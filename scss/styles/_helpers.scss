@@ -27,22 +27,6 @@
     float: right;
 }
 
-@mixin rotate {
-    /* Rotate from top left corner (not default) */
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
-
-.rotate {
-    @include rotate;
-}
 
 /**
  * Hide elements visually, but keep them available for screen readers.
@@ -66,24 +50,4 @@
     visibility: hidden;
     opacity: 0;
     filter: alpha(opacity = 0);
-}
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }

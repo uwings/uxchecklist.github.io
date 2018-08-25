@@ -33,7 +33,7 @@
             left: 3px;
 
             &:not(.span--iconTitle) {
-                @include rotate;
+                @include rotate90;
             }
 
             &.span--iconTitle {

@@ -8,6 +8,8 @@
 
 @import "styles/helpers";
 
+@import "styles/animate-transform";
+
 @import "styles/typography";
 
 @import "styles/layout";
@@ -36,10 +38,12 @@
 
 @import "styles/footer";
 
+@import "component";
+
+@import "styles/buy-banner";
+
+@import "releases";
+
 @import "styles/mediaquery";
 
 @import "print/print";
-
-@import "component";
-
-@import "releases";
