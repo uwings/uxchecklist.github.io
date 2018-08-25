@@ -124,7 +124,7 @@ gulp.task('watch', function() {
 
 
 gulp.task('watchSass', function() {
-  gulp.watch('scss/**/*.scss', ['scss']);
+  gulp.watch('scss/**/*.scss', ['scssLight']);
 });
 
 gulp.task('imgmin', function () {
