@@ -3,26 +3,66 @@
     bottom: -1px;
     right: 1rem;
     left: 1rem;
+
+    @media (min-width: 600px) {
+        right: 1rem;
+        left: auto;
+    }
 }
 
 .buy-banner--inner {
     padding: 0.25rem;
     padding-bottom: 0;
-    background: $buyBannerBgColor;
+    background-color: $buyBannerBgColor;
     position: relative;
     color: $buyBannerTextColor;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: saturate($buyBannerBgColor, 10%);
+
+        .buy-banner--toggle {
+			background-color: saturate($buyBannerBgColor, 10%);        	
+        }
+    }
 }
 
-.buy-banner--toggle{
-	height: 3rem;
-	width: 3rem;
-	background: $buyBannerBgColor;
-	position: absolute;
-	top: -2.8rem;
-	right: 0;	
+.buy-banner--wrapper--is-folded {
+    &:hover {
+        .fa {
+            -webkit-animation: slideUpChevron 0.8s infinite;
+            -moz-animation: slideUpChevron 0.8s infinite;
+            -o-animation: slideUpChevron 0.8s infinite;
+            animation: slideUpChevron 0.8s infinite;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.buy-banner--toggle {
+    height: 3rem;
+    width: 3rem;
+    background-color: $buyBannerBgColor;
+    position: absolute;
+    top: -2.8rem;
+    right: 0;
     display: flex;
     justify-content: center;
-    align-items: center;	
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    .fa {
+        @include scale(0.9);
+
+        .buy-banner--wrapper--is-unfolded & {
+            transition: all 0.5s ease;
+            -webkit-transform: rotate(-180deg) scale(1.1);
+            -moz-transform: rotate(-180deg) scale(1.1);
+            -ms-transform: rotate(-180deg) scale(1.1);
+            -o-transform: rotate(-180deg) scale(1.1);
+        }
+    }
 }
 
 .buy-banner--header {
@@ -30,15 +70,37 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .buy-banner--text {
     text-align: left;
     font-size: 1.2rem;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    opacity: 1;
+    transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s, height 0.1s ease 0.6s, width 0.1s ease 0.6s;
+    cursor: pointer;
 
     p {
         padding-bottom: 0;
         margin-bottom: 0;
+    }
+
+    .buy-banner--wrapper--is-folded & {
+        max-width: 500px;
+        max-height: 500px;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .buy-banner--wrapper--is-unfolded & {
+        overflow: hidden;
+        max-width: 0;
+        max-height: 0;
+        opacity: 0;
+        transform: translateX(-200%);
     }
 }
 
@@ -48,26 +110,48 @@
     font-size: 1.1rem;
     font-weight: bold;
     color: $buyBannerBtnTextColor;
-    text-decoration: none;
+    text-decoration: none !important;
     text-transform: uppercase;
     line-height: 1;
     padding: 1em 0.5em;
     text-align: center;
     margin-bottom: 0;
+    flex-grow: 1;
+    transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s, background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: saturate($buyBannerBtnBgColor, 20%);
+    }
+
+    .buy-banner--wrapper--is-folded & {
+        transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s;
+    }
+
+    .buy-banner--wrapper--is-unfolded & {
+        max-width: 100% !important;
+        transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s;
+    }
 }
 
 .buy-banner--content {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-y: hidden;
+    transition: all 0.6s cubic-bezier(0, 1, 0.5, 1);
 
     .buy-banner--wrapper--is-folded & {
-    	// max-height: 0;
+        max-height: 0;
+    }
+
+    .buy-banner--wrapper--is-unfolded & {
+        max-height: 200px;
     }
 }
 
 .buy-banner--image {
-    margin: 0;
-    padding: 0;
+    display: block;
     width: 100%;
+    cursor: pointer;
 }

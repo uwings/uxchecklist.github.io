@@ -572,6 +572,30 @@ table {
   to {
     opacity: 1; } }
 
+@-webkit-keyframes slideUpChevron {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%); } }
+
+@keyframes slideUpChevron {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%); } }
+
 body {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: normal;
@@ -1553,18 +1577,34 @@ body,
   bottom: -1px;
   right: 1rem;
   left: 1rem; }
+  @media (min-width: 600px) {
+    .buy-banner--wrapper {
+      right: 1rem;
+      left: auto; } }
 
 .buy-banner--inner {
   padding: 0.25rem;
   padding-bottom: 0;
-  background: #38CBAA;
+  background-color: #38CBAA;
   position: relative;
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .buy-banner--inner:hover {
+    background-color: #2bd8b1; }
+    .buy-banner--inner:hover .buy-banner--toggle {
+      background-color: #2bd8b1; }
+
+.buy-banner--wrapper--is-folded:hover .fa {
+  -webkit-animation: slideUpChevron 0.8s infinite;
+  animation: slideUpChevron 0.8s infinite;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 .buy-banner--toggle {
   height: 3rem;
   width: 3rem;
-  background: #38CBAA;
+  background-color: #38CBAA;
   position: absolute;
   top: -2.8rem;
   right: 0;
@@ -1576,7 +1616,22 @@ body,
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out; }
+  .buy-banner--toggle .fa {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9); }
+    .buy-banner--wrapper--is-unfolded .buy-banner--toggle .fa {
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      -webkit-transform: rotate(-180deg) scale(1.1);
+      -moz-transform: rotate(-180deg) scale(1.1);
+      -ms-transform: rotate(-180deg) scale(1.1);
+      -o-transform: rotate(-180deg) scale(1.1); }
 
 .buy-banner--header {
   padding: 1rem;
@@ -1588,14 +1643,37 @@ body,
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  overflow-x: hidden; }
 
 .buy-banner--text {
   text-align: left;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.4s, height 0.1s ease 0.6s, width 0.1s ease 0.6s, -webkit-transform 0.5s ease 0.4s;
+  transition: opacity 0.5s ease 0.4s, height 0.1s ease 0.6s, width 0.1s ease 0.6s, -webkit-transform 0.5s ease 0.4s;
+  transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s, height 0.1s ease 0.6s, width 0.1s ease 0.6s;
+  transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s, height 0.1s ease 0.6s, width 0.1s ease 0.6s, -webkit-transform 0.5s ease 0.4s;
+  cursor: pointer; }
   .buy-banner--text p {
     padding-bottom: 0;
     margin-bottom: 0; }
+  .buy-banner--wrapper--is-folded .buy-banner--text {
+    max-width: 500px;
+    max-height: 500px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; }
+  .buy-banner--wrapper--is-unfolded .buy-banner--text {
+    overflow: hidden;
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); }
 
 .buy-banner--button {
   background: #50E3C2;
@@ -1603,22 +1681,44 @@ body,
   font-size: 1.1rem;
   font-weight: bold;
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: none !important;
   text-transform: uppercase;
   line-height: 1;
   padding: 1em 0.5em;
   text-align: center;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s, background-color 0.3s ease;
+  transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s, background-color 0.3s ease;
+  cursor: pointer; }
+  .buy-banner--button:hover {
+    background-color: #3cf7cd; }
+  .buy-banner--wrapper--is-folded .buy-banner--button {
+    -webkit-transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s;
+    transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s; }
+  .buy-banner--wrapper--is-unfolded .buy-banner--button {
+    max-width: 100% !important;
+    -webkit-transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s;
+    transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0.1s; }
 
 .buy-banner--content {
   margin: 0;
   padding: 0;
-  width: 100%; }
+  width: 100%;
+  overflow-y: hidden;
+  -webkit-transition: all 0.6s cubic-bezier(0, 1, 0.5, 1);
+  transition: all 0.6s cubic-bezier(0, 1, 0.5, 1); }
+  .buy-banner--wrapper--is-folded .buy-banner--content {
+    max-height: 0; }
+  .buy-banner--wrapper--is-unfolded .buy-banner--content {
+    max-height: 200px; }
 
 .buy-banner--image {
-  margin: 0;
-  padding: 0;
-  width: 100%; }
+  display: block;
+  width: 100%;
+  cursor: pointer; }
 
 @media (min-width: 1024px) {
   .row {
