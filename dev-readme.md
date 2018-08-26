@@ -40,11 +40,17 @@ What's set up here:
 - index-multi.html
 - index-single.html
 
+**To limit confusion: work only in these two files, never in index.html**
+
 On deployment: copy index-multi.html or index-single.html into index.html and push to master
 
 ### Styles
 There is class `.body-multi` and `.body-single` on `<body>` so you can target styles separately when needed
 This Way they can share SCSS/CSS
+
+### JS
+Js for Multi goes int js/index.js
+Js for Multi goes int js/index-single.js
 
 **The CSS way** :
 
