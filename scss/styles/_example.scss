@@ -1,0 +1,12 @@
+.example a {
+	color: red;
+}
+
+.example {
+	a {
+		color: red;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
