@@ -904,7 +904,7 @@ input.labelauty + label > span.labelauty-checked-image {
   @media (min-width: 1024px) {
     .support-us-wrapper {
       position: fixed;
-      top: 0;
+      top: 3rem;
       right: 1rem;
       text-align: right; } }
 
