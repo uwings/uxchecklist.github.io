@@ -628,7 +628,8 @@ p {
   font-size: 0.9em; }
 
 #title, #gdrivebox {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  padding-top: 1rem; }
 
 #header {
   padding: 0.8rem;
