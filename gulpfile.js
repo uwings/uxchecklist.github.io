@@ -83,7 +83,7 @@ gulp.task('deploy', function () {
 });
 
 gulp.task('js', function() {
-  gulp.src('js/*.js',)
+  gulp.src('js/*.js')
     .pipe(uglify())
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(concat('j.js'))
