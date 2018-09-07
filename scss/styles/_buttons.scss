@@ -1,17 +1,19 @@
 button,
 .button {
     border-radius: 5px;
-    background-color: $blueJean;
-    color: $white;
+    background-color: $buttonBackground;
+    color: $buttonColor;
     font-size: 0.9em;
-    padding: 5px 10px;
+    padding: 6px 10px;
+    line-height: 1.25;
     margin-left: 5px;
     cursor: pointer;
     border: none;
+    display: inline-block;
 
     i {
         margin-right: 10px;
-        color: $white;
+        color: $buttonColor;
     }
 }
 
@@ -19,7 +21,7 @@ button,
     button,
     .button {
         &:hover {
-            background-color: $blueLight;
+            background-color: $buttonBackgroundHover;
             text-decoration: none;
             border-bottom: none;
         }

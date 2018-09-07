@@ -1,14 +1,6 @@
 #footer .typeform-share {
     display: inline-block;
-    border-radius: 5px;
-    background-color: $blue;
-    color: white;
-    font-size: 0.9em;
-    line-height: normal;
-    padding: 5px 10px;
     margin-left: 10px;
-    text-decoration: none !important;
-    border-bottom: none;
 }
 
 .no-touch #footer .typeform-share:hover {
@@ -20,24 +12,31 @@
 }
 
 #github {
-    background-color: #999;
-    color: #FFF;
+    background-color: $gray;
 }
 
-#mc_embed_signup label {
-    width: 100%;
-    text-align: center;
-    display: block;
-    margin-bottom: 10px;
-}
+#mm-embedded-form {
+    display: flex;
+    margin: 2rem auto;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
 
-#mc_embed_signup input {
-    border: 1px solid $borderSignupColor;
-    -webkit-appearance: none;
-    padding: 8px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    font-weight: lighter;
+    .mm-field{
+        width: 250px;
+        margin: 0 .8rem;
+    }    
+    button {
+        background-color: $buttonBackground;
+        color: $white;
+        &:hover {
+            background-color: $buttonBackgroundHover;
+        }
+    }
+    label,
+    .mm-powered-by {
+        display: none;
+    }
 }
 
 #gdrivebox {
