@@ -646,10 +646,12 @@ button,
   background-color: #369;
   color: #ffffff;
   font-size: 0.9em;
-  padding: 5px 10px;
+  padding: 6px 10px;
+  line-height: 1.25;
   margin-left: 5px;
   cursor: pointer;
-  border: none; }
+  border: none;
+  display: inline-block; }
   button i,
   .button i {
     margin-right: 10px;
@@ -840,15 +842,7 @@ input.labelauty + label > span.labelauty-checked-image {
 
 #footer .typeform-share {
   display: inline-block;
-  border-radius: 5px;
-  background-color: #00F;
-  color: white;
-  font-size: 0.9em;
-  line-height: normal;
-  padding: 5px 10px;
-  margin-left: 10px;
-  text-decoration: none !important;
-  border-bottom: none; }
+  margin-left: 10px; }
 
 .no-touch #footer .typeform-share:hover {
   background-color: #47B; }
@@ -857,22 +851,31 @@ input.labelauty + label > span.labelauty-checked-image {
   vertical-align: top !important; }
 
 #github {
-  background-color: #999;
-  color: #FFF; }
+  background-color: #999; }
 
-#mc_embed_signup label {
-  width: 100%;
-  text-align: center;
-  display: block;
-  margin-bottom: 10px; }
-
-#mc_embed_signup input {
-  border: 1px solid #e6e6e6;
-  -webkit-appearance: none;
-  padding: 8px 10px;
-  border-radius: 5px;
-  font-size: 0.9em;
-  font-weight: lighter; }
+#mm-embedded-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem auto;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  #mm-embedded-form .mm-field {
+    width: 250px;
+    margin: 0 .8rem; }
+  #mm-embedded-form button {
+    background-color: #369;
+    color: #ffffff; }
+    #mm-embedded-form button:hover {
+      background-color: #47B; }
+  #mm-embedded-form label,
+  #mm-embedded-form .mm-powered-by {
+    display: none; }
 
 #gdrivebox {
   margin-bottom: 10px; }
