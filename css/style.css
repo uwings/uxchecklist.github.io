@@ -1724,24 +1724,6 @@ body,
   width: 100%;
   cursor: pointer; }
 
-.row--love-hide {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  filter: alpha(opacity=0) !important; }
-
-.patreon-hide {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  filter: alpha(opacity=0) !important; }
-
-.not-released {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  filter: alpha(opacity=0) !important; }
-
 @media (min-width: 1024px) {
   .row {
     display: -webkit-box;
