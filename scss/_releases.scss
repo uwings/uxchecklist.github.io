@@ -2,13 +2,13 @@
 
 // Comment / delete these and remove the class from index.html
 .row--love-hide {
-	// @include hideUntilRelease();
+	@include hideUntilRelease();
 }
 
 .patreon-hide{
-	// @include hideUntilRelease();
+	@include hideUntilRelease();
 }
 
 .not-released{
-	// @include hideUntilRelease();
+	@include hideUntilRelease();
 }
