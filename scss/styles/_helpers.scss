@@ -46,8 +46,8 @@
 }
 
 @mixin hideUntilRelease {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    filter: alpha(opacity = 0);
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    filter: alpha(opacity = 0) !important;
 }
