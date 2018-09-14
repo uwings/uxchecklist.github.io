@@ -27,10 +27,10 @@
 	text-transform: capitalize;
 }
 
-#sharebox {
+#sharebox, .support-us-wrapper {
 	display: flex;
 	align-items: center;
-	margin: 8px 0;
+	margin: 8px 8px 8px 0;
 	padding-top: 8px;
 }
 
@@ -57,7 +57,7 @@
 }
 
 #checklist-form {
-	margin-bottom: 50px;
+	margin-bottom: 1.25rem;
 }
 
 #gdrivebox span {
