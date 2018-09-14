@@ -19,7 +19,8 @@ What's set up here:
 1. Install node and make sure npm (Node Package Manager) is also [installed](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm)
 2. In terminal, `cd` (change directory) to the folder containing your project.
 3. `npm install` or `npm i` to download dependancies
-    3.1 Install Gulp with `npm install gulp -g` - `-g` installs gulp globally on your system - see [Gulp.js](https://gulpjs.com/) - this might be optional
+
+- 3.1 Install Gulp with `npm install gulp -g` - `-g` installs gulp globally on your system - see [Gulp.js](https://gulpjs.com/) - this might be optional
 4. open a second terminal window in your working directory
 
 ### GULP / build - in terminal 1
