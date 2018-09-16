@@ -17,7 +17,7 @@
 
 #mm-embedded-form {
     display: flex;
-    margin: 2rem auto;
+    margin: 0.5rem auto 2rem;
     vertical-align: middle;
     align-items: center;
     justify-content: center;
@@ -29,6 +29,7 @@
     button {
         background-color: $buttonBackground;
         color: $white;
+        font-weight: 300;
         &:hover {
             background-color: $buttonBackgroundHover;
         }
@@ -40,7 +41,6 @@
 }
 
 #gdrivebox {
-    margin-bottom: 10px;
 
     span {
         font-size: 0.9em;
@@ -74,13 +74,13 @@
 
 .support-us-wrapper {
     z-index: 2;
-    margin: 2rem auto 3rem;
+    /* margin: 2rem auto 3rem; */
 
     @media (min-width: 1024px) {
-        position: fixed;
+        /* position: fixed;
         top: 3rem;
         right: 1rem;
-        text-align: right;
+        text-align: right; */
     }
 }
 
