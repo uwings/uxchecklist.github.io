@@ -627,9 +627,11 @@ p {
   margin-bottom: 10px;
   font-size: 0.9em; }
 
-#title, #gdrivebox {
-  margin-bottom: 10px;
-  padding-top: 1rem; }
+#title {
+  margin: 10px 0; }
+
+#gdrivebox {
+  margin: 15px 0; }
 
 #header {
   padding: 0.8rem;
@@ -646,6 +648,7 @@ button,
   background-color: #369;
   color: #ffffff;
   font-size: 0.9em;
+  font-weight: 300;
   padding: 6px 10px;
   line-height: 1.25;
   margin-left: 5px;
@@ -857,7 +860,7 @@ input.labelauty + label > span.labelauty-checked-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem auto;
+  margin: 0.5rem auto 2rem;
   vertical-align: middle;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -870,18 +873,17 @@ input.labelauty + label > span.labelauty-checked-image {
     margin: 0 .8rem; }
   #mm-embedded-form button {
     background-color: #369;
-    color: #ffffff; }
+    color: #ffffff;
+    font-weight: 300; }
     #mm-embedded-form button:hover {
       background-color: #47B; }
   #mm-embedded-form label,
   #mm-embedded-form .mm-powered-by {
     display: none; }
 
-#gdrivebox {
-  margin-bottom: 10px; }
-  #gdrivebox span {
-    font-size: 0.9em;
-    display: none; }
+#gdrivebox span {
+  font-size: 0.9em;
+  display: none; }
 
 #sharebox ul li {
   display: inline-block;
@@ -904,13 +906,13 @@ input.labelauty + label > span.labelauty-checked-image {
 
 .support-us-wrapper {
   z-index: 2;
-  margin: 2rem auto 3rem; }
+  /* margin: 2rem auto 3rem; */ }
   @media (min-width: 1024px) {
     .support-us-wrapper {
-      position: fixed;
-      top: 3rem;
-      right: 1rem;
-      text-align: right; } }
+      /* position: fixed;
+        top: 3rem;
+        right: 1rem;
+        text-align: right; */ } }
 
 .wrapper--paypal-button {
   text-align: center; }
@@ -963,7 +965,7 @@ input.labelauty + label > span.labelauty-checked-image {
   margin-right: 16px;
   text-transform: capitalize; }
 
-#sharebox {
+#sharebox, .support-us-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -971,6 +973,7 @@ input.labelauty + label > span.labelauty-checked-image {
       -ms-flex-align: center;
           align-items: center;
   margin: 8px 0;
+  margin: 8px 8px 8px 0;
   padding-top: 8px; }
 
 #sharebox ul li {
@@ -995,7 +998,7 @@ input.labelauty + label > span.labelauty-checked-image {
   background: #2e734b; }
 
 #checklist-form {
-  margin-bottom: 50px; }
+  margin-bottom: 1.25rem; }
 
 #gdrivebox span {
   font-size: 0.9em;
@@ -1013,7 +1016,9 @@ input.labelauty + label > span.labelauty-checked-image {
   background: #FFF;
   width: 100%;
   z-index: 1;
-  min-height: 60px; }
+  min-height: 60px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 #header.loading {
   background: -webkit-gradient(linear, right top, left top, from(#efefef), to(#ffffff));
