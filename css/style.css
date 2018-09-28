@@ -865,6 +865,13 @@ input.labelauty + label > span.labelauty-checked-image {
   right: 0;
   bottom: 40px;
   z-index: 999; }
+  @media screen and (max-width: 480px) {
+    #articlePopUp {
+      bottom: 0;
+      width: 100%; }
+      #articlePopUp a {
+        white-space: normal;
+        text-decoration: underline; } }
   #articlePopUp #medium-logo {
     float: right; }
   #articlePopUp h2 {

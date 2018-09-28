@@ -24,6 +24,16 @@
     bottom: 40px;
     z-index: 999;
 
+    @media screen and (max-width: 480px) {
+        bottom: 0;  
+        width: 100%;
+
+        a {
+            white-space: normal;
+            text-decoration: underline;
+        }
+    }
+
     #medium-logo {
         float: right;
     }
@@ -37,6 +47,7 @@
         }
     }
 }
+
 
 #mm-embedded-form {
     display: flex;
