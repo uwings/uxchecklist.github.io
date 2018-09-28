@@ -15,6 +15,29 @@
     background-color: $gray;
 }
 
+#articlePopUp {
+    background: #fff;
+    box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+    padding: 16px;
+    position: fixed;
+    right: 0;
+    bottom: 40px;
+    z-index: 999;
+
+    #medium-logo {
+        float: right;
+    }
+
+    h2 {
+        font-weight: 500;
+        margin-top: 16px;
+
+        a {
+            color: #222;
+        }
+    }
+}
+
 #mm-embedded-form {
     display: flex;
     margin: 0.5rem auto 2rem;

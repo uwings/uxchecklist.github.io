@@ -856,6 +856,23 @@ input.labelauty + label > span.labelauty-checked-image {
 #github {
   background-color: #999; }
 
+#articlePopUp {
+  background: #fff;
+  -webkit-box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+          box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+  padding: 16px;
+  position: fixed;
+  right: 0;
+  bottom: 40px;
+  z-index: 999; }
+  #articlePopUp #medium-logo {
+    float: right; }
+  #articlePopUp h2 {
+    font-weight: 500;
+    margin-top: 16px; }
+    #articlePopUp h2 a {
+      color: #222; }
+
 #mm-embedded-form {
   display: -webkit-box;
   display: -ms-flexbox;
