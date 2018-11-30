@@ -1,6 +1,38 @@
 
-#footer {
-    padding: 1.25rem;
+#footer {    
+    padding: 2rem 2rem 100px;  
+    background-color: $light;
+    justify-content: space-around;
+    align-items: normal;
     text-align: center;
 }
 
+#springboard {
+    margin-top: 20px;
+}
+
+.footerColumn {
+	
+	margin: 1em 0;
+	width: 100%;
+
+	h4 {
+		text-align: left;
+		margin: 10px 0;
+		font-weight: 400;
+	}
+
+
+	#toolbar { 
+	    text-align: center;
+	}
+
+	@media screen and (min-width: 900px) {
+		margin: 0;
+		width: auto; 
+
+		#toolbar {
+		    text-align: right;
+		}
+	}
+}

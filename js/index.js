@@ -228,6 +228,7 @@ $().ready(function() {
                 controller.save();
             });
             $('#sharebox').appendTo('#signin-success');
+            $('#supportUs').appendTo('#signin-success');
             $('#header').removeClass('loading');
         };
 

@@ -4,11 +4,6 @@ body {
     font-weight: 300;
 }
 
-#header h1 {
-    display: inline-block;
-    padding: 5px;
-}
-
 small {
     font-size: 0.7em;
 }
@@ -19,7 +14,7 @@ a {
     white-space: nowrap;
 
     i {
-        color: $ligther2;
+        color: $lighter2;
     }
 }
 
@@ -27,7 +22,7 @@ a {
     text-decoration: underline;
 
     i {
-        color: $ligther4;
+        color: $lighter4;
     }
 }
 

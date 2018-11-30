@@ -52,21 +52,14 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div id="articlePopUp" class="hide-for-print">
-    	<img src="img/medium-author.png" alt="Author: Andrea" width="160">
-    	<img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
-    	<!-- <a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">Read on Medium</a> -->
-    	<h2><a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">UX Project Checklist — Why I made it and what’s next</a></h2>
-    </div>
-    <div id="header" class="">
+    <div id="header" class="flexcontainer">
         <div id="title">
             <h1>UX Project Checklist</h1>
         </div>
-        <div id="gdrivebox" class="hide-for-print">
+        <div id="gdrivebox" class="hide-for-print flexgrow">
             <span id="signin-do">
                     <button id="signin"><i class="fa fa-sign-in"></i>Sign in with Google</button> to sync across devices.
-                    <a href="#signin-info" class="open-popup-link">
-                    <i class="fa fa-info-circle fa-lg"></i></a>
+                    <a href="#signin-info" class="open-popup-link"></a>
                 </span>
             <span id="signin-failed">Sign in failed! :(</span>
             <span id="signin-success">You're signed in with Google.</span>
@@ -119,7 +112,7 @@
         </div>
         <div class="support-us-wrapper hide-for-print">
             <!-- PayPal donate button -->
-            <div class="wrapper--paypal-button hide-for-print">
+            <div class="wrapper-paypal-button hide-for-print">
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="CZJKKFXRARWJL">
@@ -128,7 +121,7 @@
             </div>
             <!-- PayPal donate button END -->
             <!-- Patreon -->
-            <div class="wrapper--patreon-button hide-for-print not-released">
+            <div class="wrapper-patreon-button hide-for-print not-released">
                 <iframe src="/widgets/patreon.html" frameborder="0" height="auto" scrolling="no" width="100%"></iframe>
             </div>
             <!-- Patreon END -->
@@ -533,74 +526,103 @@
             </div>
         </div>
     </form>
-    <div id="footer" class="">
-        <div id="toolbar" class="hide-for-print">
-            <button id="print" type="button"><i class="fa fa-print"></i>Print</button>
-            <button id="reset"><i class="fa fa-refresh"></i>Reset</button>
-            <a id="github" class="button" href="https://github.com/uxchecklist/uxchecklist.github.io" target="_blank"><i class="fa fa-github"></i>Fork</a>
+    <footer id="footer" class="flexcontainer">
+
+        <div class="footerColumn">
+            <h4>Read the story on Medium</h4>
+            <div id="articlePopUp" class="hide-for-print">
+                <a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
+                <img src="img/medium-author.png" alt="Author: Andrea" width="160">
+                <img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
+                <!-- <a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">Read on Medium</a> -->
+                <h2>UX Project Checklist — Why I made it and what’s next</h2>
+                </a>
+            </div>
+            <div id="springboard" class="">
+                <h4>Get $250 OFF and learn UX</h4>
+                <a target="_blank" href="https://www.springboard.com/invite/XUCZ1/">
+                    <img src="img/springboard.png" alt="Learn UX on Springboard">
+                </a>
+            </div>
         </div>
-        <div id="credits">Created by&nbsp;<a href="https://twitter.com/sovesove" target="_blank">@sovesove</a>
+
+        <div class="footerColumn flexgrow">
+            <div id="credits">Created by&nbsp;<a href="https://twitter.com/sovesove" target="_blank">@sovesove</a>
+            </div>
+            <div class="hide-for-print clearfix">
+                <a class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Tell us what you think!</a>
+                <script>
+                (function() {
+                    var qs, js, q, s, d = document,
+                        gi = d.getElementById,
+                        ce = d.createElement,
+                        gt = d.getElementsByTagName,
+                        id = 'typef_orm',
+                        b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+                    if (!gi.call(d, id)) {
+                        js = ce.call(d, 'script');
+                        js.id = id;
+                        js.src = b + 'share.js';
+                        q = gt.call(d, 'script')[0];
+                        q.parentNode.insertBefore(js, q)
+                    }
+                    id = id + '_';
+                    /*if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}*/
+                })()
+                </script>
+            </div>
+            <div id="inspiredby" class="hide-for-print clearfix"><a href="#friends" class="open-popup-link">Friends of this page</a></div>
+            <div id="friends" class="white-popup mfp-hide">
+                <p>
+                    Special thanks to:</br>
+                    <a href="https://twitter.com/alefranz" target="_blank">@alefranz</a> for the technical magic.</br>
+                </p>
+                <p>
+                    Inspired by&nbsp;<a href="http://webdesignerschecklist.com/" target="_blank">this</a>,&nbsp;<a href="https://stayintech.com/info/UX" target="_blank">this</a>&nbsp;and&nbsp;<a href="http://ixdchecklist.com/" target="_blank">this</a>
+                </p>
+                <p>
+                    Also thanks to:</br>
+                    <a href="http://www.manuelalangella.com/" target="_blank">Manuela</a> for the superb illustrated icons.</br>
+                    <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a> for this responsive modal popup.</br>
+                    <a href="http://garlicjs.org/" target="_blank">GarlicJs</a> for the garlic, which everyone knows helps you save digital things locally in your browser.</br>
+                    <a href="http://fntneves.github.io/jquery-labelauty/" target="_blank">Labelauty</a> for the checkbox beautifier.</br>
+                    <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> for the iconic font.</br>
+                </p>
+            </div>
         </div>
-        <div class="hide-for-print clearfix">
-            <a class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Do you like that?</a>
-            <script>
-            (function() {
-                var qs, js, q, s, d = document,
-                    gi = d.getElementById,
-                    ce = d.createElement,
-                    gt = d.getElementsByTagName,
-                    id = 'typef_orm',
-                    b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
-                if (!gi.call(d, id)) {
-                    js = ce.call(d, 'script');
-                    js.id = id;
-                    js.src = b + 'share.js';
-                    q = gt.call(d, 'script')[0];
-                    q.parentNode.insertBefore(js, q)
-                }
-                id = id + '_';
-                /*if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}*/
-            })()
-            </script>
+
+        <div class="footerColumn">
+            <div id="toolbar" class="hide-for-print">
+                <button id="print" type="button"><i class="fa fa-print"></i>Print</button>
+                <button id="reset" class="resetBtn"><i class="fa fa-refresh"></i>Reset</button>
+                <a id="github" class="button" href="https://github.com/uxchecklist/uxchecklist.github.io" target="_blank"><i class="fa fa-github"></i>Fork</a>
+            </div>
         </div>
-        <div id="inspiredby" class="hide-for-print clearfix"><a href="#friends" class="open-popup-link">Friends of this page</a></div>
-        <div id="friends" class="white-popup mfp-hide">
-            <p>
-                Special thanks to:</br>
-                <a href="https://twitter.com/alefranz" target="_blank">@alefranz</a> for the technical magic.</br>
-            </p>
-            <p>
-                Inspired by&nbsp;<a href="http://webdesignerschecklist.com/" target="_blank">this</a>,&nbsp;<a href="https://stayintech.com/info/UX" target="_blank">this</a>&nbsp;and&nbsp;<a href="http://ixdchecklist.com/" target="_blank">this</a>
-            </p>
-            <p>
-                Also thanks to:</br>
-                <a href="http://www.manuelalangella.com/" target="_blank">Manuela</a> for the superb illustrated icons.</br>
-                <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a> for this responsive modal popup.</br>
-                <a href="http://garlicjs.org/" target="_blank">GarlicJs</a> for the garlic, which everyone knows helps you save digital things locally in your browser.</br>
-                <a href="http://fntneves.github.io/jquery-labelauty/" target="_blank">Labelauty</a> for the checkbox beautifier.</br>
-                <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> for the iconic font.</br>
-            </p>
-        </div>
-        <div id="buy-banner" class="buy-banner--wrapper buy-banner--wrapper--is-folded hide-for-print not-released">
-            <div class="buy-banner--inner">
-                <span id="buy-banner-toggle" class="buy-banner--toggle">
-                    <i class="fa fa-chevron-up"></i>
-                </span>
-                <header class="buy-banner--header">
-                    <div id="buy-banner-toggle" class="buy-banner--text">
-                        <p>LOVE THIS?
-                            <br> Put it on your wall!</p>
-                    </div>
-                    <a id="buy-banner--button" href="#" target="_blank" class="buy-banner--button">get the poster</a>
-                </header>
-                <div class="buy-banner--content">
-                    <a href="#" target="_blank">
-                        <img src="img/banner.png" alt="" class="buy-banner--image">
-                    </a>
+        
+    </footer>
+
+
+    <div id="buy-banner" class="buy-banner--wrapper buy-banner--wrapper--is-folded hide-for-print not-released">
+        <div class="buy-banner--inner">
+            <span id="buy-banner-toggle" class="buy-banner--toggle">
+                <i class="fa fa-chevron-up"></i>
+            </span>
+            <header class="buy-banner--header">
+                <div id="buy-banner-toggle" class="buy-banner--text">
+                    <p>LOVE THIS?
+                        <br> Put it on your wall!</p>
                 </div>
+                <a id="buy-banner--button" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank" class="buy-banner--button">get the poster</a>
+            </header>
+            <div class="buy-banner--content">
+                <a href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
+                    <img src="img/banner.png" alt="" class="buy-banner--image">
+                </a>
             </div>
         </div>
     </div>
+
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- <script src="js/vendor/jquery.js"></script> -->
     <script>
@@ -700,25 +722,7 @@
     <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
     <script type="text/javascript" src="js/realtime.js"></script>
     <script type="text/javascript" src="js/index-single.js"></script>
-    <!-- moonmail.io embedded form JavaScript, remove this script to use the plain form -->
-    <script src="https://static.moonmail.io/mm-embedded-form.js"></script>
-    <!-- moonmail.io embedded form options, allows you to configure a form behaviour -->
-    <script>
-    mmOptions = {
-        "config": {
-            "reCapcha": false,
-            "redirectUrl": false
-        },
-        "translations": {
-            "required": "This field is required.",
-            "email": "Please enter a valid email address.",
-            "emailExists": "Email already exists.",
-            "onlyLetters": "Only letters and spaces are allowed.",
-            "success": "You've been successfully subscribed.",
-            "error": "Oops! Something went wrong..."
-        }
-    }
-    </script>
+    
 </body>
 
 </html>

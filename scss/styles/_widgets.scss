@@ -15,17 +15,40 @@
     background-color: $gray;
 }
 
-#articlePopUp {
-    background: #fff;
-    box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
-    padding: 16px;
-    position: fixed;
-    right: 0;
-    bottom: 40px;
-    z-index: 999;
+#springboard { 
+
+    width: 430px;
+
+    a {
+        display: block;
+    }
+
+    img {
+        border: $lighter4 1px solid;
+        width: 100%;
+    }
 
     @media screen and (max-width: 480px) {
-        bottom: 0;  
+        width: 100%;
+    }
+}
+
+#articlePopUp {
+    background: $white;
+    text-align: left;
+    border: $lighter4 1px solid;
+    border-radius: 2px;
+    text-align: left;
+    width: 430px;
+    margin: 0;
+
+    a {
+        padding: 16px;
+        display: block;
+        color: #222;
+    }
+
+    @media screen and (max-width: 480px) {
         width: 100%;
 
         a {
@@ -41,11 +64,11 @@
     h2 {
         font-weight: 500;
         margin-top: 16px;
-
-        a {
-            color: #222;
-        }
     }
+}
+
+#articlePopUp:hover, #springboard a:hover img {
+    box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
 }
 
 
@@ -82,11 +105,6 @@
     }
 }
 
-#sharebox ul li {
-    display: inline-block;
-    vertical-align: top;
-}
-
 #mc_embed_signup,
 #credits,
 #toolbar {
@@ -106,32 +124,32 @@
     top: 0;
 }
 
-.support-us-wrapper {
-    z-index: 2;
-    /* margin: 2rem auto 3rem; */
+// .support-us-wrapper {
+//     z-index: 2;
+//     /* margin: 2rem auto 3rem; */
 
-    @media (min-width: 1024px) {
-        /* position: fixed;
-        top: 3rem;
-        right: 1rem;
-        text-align: right; */
-    }
-}
+//     @media (min-width: 1024px) {
+//         /* position: fixed;
+//         top: 3rem;
+//         right: 1rem;
+//         text-align: right; */
+//     }
+// }
 
-.wrapper--paypal-button {
-    text-align: center;
-}
+// .wrapper--paypal-button {
+//     text-align: center;
+// }
 
-.wrapper--patreon-button {
-    display: block;
-    width: 100%;
-    max-width: 198px;
-    text-align: center;
-    height: 40px;
+// .wrapper--patreon-button {
+//     display: block;
+//     width: 100%;
+//     max-width: 198px;
+//     text-align: center;
+//     height: 40px;
 
-    @media (min-width: 1024px) {
-        .body-multi & {
-            margin-top: -0.75rem;
-        }
-    }
-}
+//     @media (min-width: 1024px) {
+//         .body-multi & {
+//             margin-top: -0.75rem;
+//         }
+//     }
+// }

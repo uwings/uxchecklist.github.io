@@ -1,14 +1,20 @@
-#reset {
+.resetBtn {
     background-color: transparent;
     border: 1px solid $orange;
     color: $orange;
 }
 
-#reset i {
+.resetBtn i {
     color: inherit;
 }
 
-.no-touch #reset:hover, #signin {
+.no-touch .resetBtn:hover {
+    background-color: $orange;
+    color: $white;
+    border: 1px solid $orange;
+}
+
+#signin {
     background-color: $orange;
     color: $white;
 }

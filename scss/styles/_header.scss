@@ -1,14 +1,12 @@
 
 #header {
-	display: flex;
-	flex-wrap: wrap;
-    padding: 4px 16px;
+    padding: 0 16px;
+    text-align: center; 
     box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
     background: #FFF;
     width: 100%;
     z-index: 1;
     min-height: 60px;
-    justify-content: space-around;
 }
 
 #header.loading {
@@ -37,21 +35,22 @@
 }
 
 #header h1 {
-	display: flex;
+    display: inline-block;
 	font-size: 1.3em;
     text-transform: capitalize;
     margin-right:  16px;
 }
-#header a {
+#project a {
 	color: #2d70dc;
     font-size: 0.8em;
     margin-right: 16px;
 }
-#header #signin-success i {
-	float: left;
+#project i {
 	margin-right: 16px;
     color: #2d70dc;
     cursor: pointer;
+    vertical-align: middle;
+    height: 34px;
 }
 
 #reset {
@@ -59,3 +58,8 @@
         border: none;
     }
 }
+
+#title {
+     margin: 10px 0;
+ }
+
