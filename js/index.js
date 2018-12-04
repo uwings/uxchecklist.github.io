@@ -29,7 +29,7 @@ $(document).ready(function() {
     });
     $("#footer a").on('click', function(e) {
         var elm = e.currentTarget;
-        ga('send', 'event', 'footer', $(elm).attr('title'));
+        ga('send', 'event', 'footer', $(elm).attr('id'));
     });
     $("input:checkbox").on('change', function(e) {
         var cb = $(this);
