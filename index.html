@@ -532,7 +532,7 @@
         <div class="footerColumn hide-for-print">
             <h4>Read the story on Medium</h4>
             <div id="articlePopUp" class="">
-                <a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
+                <a id="mediumLink" target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
                     <img src="img/medium-author.png" alt="Author: Andrea" width="160">
                     <img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
                     <h2>UX Project Checklist — Why I made it and what’s next</h2>
@@ -540,7 +540,7 @@
             </div>
             <div id="springboard" class="">
                 <h4>Get $250 OFF and learn UX</h4>
-                <a target="_blank" href="https://www.springboard.com/invite/XUCZ1/">
+                <a id="springboardLink" target="_blank" href="https://www.springboard.com/invite/XUCZ1/">
                     <img src="img/springboard.png" alt="Learn UX on Springboard">
                 </a>
             </div>
@@ -550,7 +550,7 @@
             <div id="credits">Created by&nbsp;<a href="https://twitter.com/sovesove" target="_blank">@sovesove</a>
             </div>
             <div class="hide-for-print clearfix">
-                <a class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Tell us what you think!</a>
+                <a id="typeformLink" class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Tell us what you think!</a>
                 <script>
                 (function() {
                     var qs, js, q, s, d = document,
@@ -571,7 +571,7 @@
                 })()
                 </script>
             </div>
-            <div id="inspiredby" class="hide-for-print clearfix"><a href="#friends" class="open-popup-link">Friends of this page</a></div>
+            <div id="inspiredby" class="hide-for-print clearfix"><a id="friendsPopup" href="#friends" class="open-popup-link">Friends of this page</a></div>
             <div id="friends" class="white-popup mfp-hide">
                 <p>
                     Special thanks to:</br>
@@ -615,7 +615,7 @@
                 <a id="buy-banner--button" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank" class="buy-banner--button">get the poster</a>
             </div>
             <div class="buy-banner--content">
-                <a href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
+                <a id="buy-banner--image" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
                     <img src="img/banner.png" alt="" class="buy-banner--image">
                 </a>
             </div>
@@ -649,7 +649,7 @@
         });
         $("#footer a").on('click', function(e) {
             var elm = e.currentTarget;
-            ga('send', 'event', 'footer', $(elm).attr('title'));
+            ga('send', 'event', 'footer', $(elm).attr('id'));
         });
         $("input:checkbox").on('change', function(e) {
             var cb = $(this);
