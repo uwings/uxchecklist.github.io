@@ -59,6 +59,7 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
+    <div id="printTitle" class="hidden">Project name: ________________________</div>
     <div id="st-container" class="st-container">
         <!-- content push wrapper -->
         <div class="st-pusher">
@@ -74,7 +75,7 @@
                 <!-- this is the wrapper for the content -->
                 <div class="st-content-inner">
                     <!-- extra div for emulating position:fixed of the menu -->
-                    <div id="header" class="loading">
+                    <header id="header" class="loading">
                         <div id="gdrivebox" class="hide-for-print">
                             <div id="signin-do" class="flexcontainer" style="display: none;">
                                 <div id="title"><h1>UX Project Checklist</h1></div>
@@ -148,7 +149,7 @@
                                 <a href="javascript:void(0);" id="confirm-delete">Delete</a>
                             </div>
                         </div>
-                    </div>
+                    </header>
                     <form id="checklist-form" method="POST">
                         <div class="row clearfix">
                             <div id="Research" class="title"><span>Research</span></div>
@@ -550,15 +551,21 @@
                     </form>
 
 
-                    <footer id="footer" class="flexcontainer">
+                    <footer id="footer" class="flexcontainer hide-for-print">
 
-                        <div class="footerColumn">
-                            <div id="articlePopUp" class="hide-for-print">
+                        <div class="footerColumn hide-for-print">
+                            <h4>Read the story on Medium</h4>
+                            <div id="articlePopUp" class="">
                                 <a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
-                                <img src="img/medium-author.png" alt="Author: Andrea" width="160">
-                                <img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
-                                <!-- <a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">Read on Medium</a> -->
-                                <h2>UX Project Checklist — Why I made it and what’s next</h2>
+                                    <img src="img/medium-author.png" alt="Author: Andrea" width="160">
+                                    <img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
+                                    <h2>UX Project Checklist — Why I made it and what’s next</h2>
+                                </a>
+                            </div>
+                            <div id="springboard" class="">
+                                <h4>Get $250 OFF and learn UX</h4>
+                                <a target="_blank" href="https://www.springboard.com/invite/XUCZ1/">
+                                    <img src="img/springboard.png" alt="Learn UX on Springboard">
                                 </a>
                             </div>
                         </div>
@@ -567,7 +574,7 @@
                             <div id="credits">Created by&nbsp;<a href="https://twitter.com/sovesove" target="_blank">@sovesove</a>
                             </div>
                             <div class="hide-for-print clearfix">
-                                <a class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Do you like that?</a>
+                                <a class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Tell us what you think!</a>
                                 <script>
                                 (function() {
                                     var qs, js, q, s, d = document,
@@ -623,13 +630,13 @@
                             <span id="buy-banner-toggle" class="buy-banner--toggle">
                                 <i class="fa fa-chevron-up"></i>
                             </span>
-                            <header class="buy-banner--header">
+                            <div class="buy-banner--header">
                                 <div id="buy-banner-toggle" class="buy-banner--text">
                                     <p>LOVE THIS?
                                         <br> Put it on your wall!</p>
                                 </div>
                                 <a id="buy-banner--button" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank" class="buy-banner--button">get the poster</a>
-                            </header>
+                            </div>
                             <div class="buy-banner--content">
                                 <a href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
                                     <img src="img/banner.png" alt="" class="buy-banner--image">

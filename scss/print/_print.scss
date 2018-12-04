@@ -62,4 +62,12 @@
     .cards img {
         display: none !important;
     }
+
+    .st-container,
+    .st-pusher,
+    .st-content,
+    .st-content-inner {
+        height: 1000px;
+        page-break-after: auto;
+    }
 }
