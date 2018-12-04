@@ -52,8 +52,9 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div id="header" class="flexcontainer">
-        <div id="title">
+    <div id="printTitle" class="hidden">Project name: ________________________</div>
+    <header id="header" class="flexcontainer">
+        <div id="title" class="hide-for-print">
             <h1>UX Project Checklist</h1>
         </div>
         <div id="gdrivebox" class="hide-for-print flexgrow">
@@ -126,7 +127,7 @@
             </div>
             <!-- Patreon END -->
         </div>
-    </div>
+    </header>
     <form id="checklist-form" method="POST">
         <div class="row clearfix">
             <div id="Research" class="title"><span>Research</span></div>
@@ -528,7 +529,7 @@
     </form>
     <footer id="footer" class="flexcontainer hide-for-print">
 
-        <div class="footerColumn">
+        <div class="footerColumn hide-for-print">
             <h4>Read the story on Medium</h4>
             <div id="articlePopUp" class="">
                 <a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
@@ -606,13 +607,13 @@
             <span id="buy-banner-toggle" class="buy-banner--toggle">
                 <i class="fa fa-chevron-up"></i>
             </span>
-            <header class="buy-banner--header">
+            <div class="buy-banner--header">
                 <div id="buy-banner-toggle" class="buy-banner--text">
                     <p>LOVE THIS?
                         <br> Put it on your wall!</p>
                 </div>
                 <a id="buy-banner--button" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank" class="buy-banner--button">get the poster</a>
-            </header>
+            </div>
             <div class="buy-banner--content">
                 <a href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
                     <img src="img/banner.png" alt="" class="buy-banner--image">
