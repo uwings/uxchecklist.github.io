@@ -7,7 +7,7 @@
  * @license: MIT License
  */
 /* Prevent text and blocks selection */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,600");
 input.labelauty + label ::-moz-selection {
   background-color: rgba(255, 255, 255, 0); }
 input.labelauty + label ::selection {
@@ -635,7 +635,7 @@ button,
   font-weight: 300;
   padding: 6px 10px;
   line-height: 1.25;
-  margin-left: 5px;
+  margin-right: 5px;
   cursor: pointer;
   border: none;
   display: inline-block; }
@@ -813,10 +813,6 @@ button,
   background-color: #999;
   color: #ffffff; }
 
-#inspiredby {
-  margin-top: 20px;
-  font-size: 0.8em; }
-
 #gdrivebox span {
   font-size: 0.9em;
   display: none; }
@@ -837,11 +833,14 @@ input.labelauty + label > span.labelauty-checked-image {
   background-image: url(../../../img/input-checked.png); }
 
 #footer .typeform-share {
-  display: inline-block;
-  margin-left: 10px; }
+  display: inline-block; }
 
 .no-touch #footer .typeform-share:hover {
   background-color: #47B; }
+
+.no-touch #friends button:hover {
+  background: none;
+  color: #333; }
 
 .fb_iframe_widget span {
   vertical-align: top !important; }
@@ -867,7 +866,7 @@ input.labelauty + label > span.labelauty-checked-image {
   border-radius: 2px;
   text-align: left;
   width: 430px;
-  margin: 0; }
+  margin: 0 auto; }
   #articlePopUp a {
     padding: 16px;
     display: block;
@@ -876,8 +875,7 @@ input.labelauty + label > span.labelauty-checked-image {
     #articlePopUp {
       width: 100%; }
       #articlePopUp a {
-        white-space: normal;
-        text-decoration: underline; } }
+        white-space: normal; } }
   #articlePopUp #medium-logo {
     float: right; }
   #articlePopUp h2 {
@@ -888,43 +886,12 @@ input.labelauty + label > span.labelauty-checked-image {
   -webkit-box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
           box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24); }
 
-#mm-embedded-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0.5rem auto 2rem;
-  vertical-align: middle;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  #mm-embedded-form .mm-field {
-    width: 250px;
-    margin: 0 .8rem; }
-  #mm-embedded-form button {
-    background-color: #369;
-    color: #ffffff;
-    font-weight: 300; }
-    #mm-embedded-form button:hover {
-      background-color: #47B; }
-  #mm-embedded-form label,
-  #mm-embedded-form .mm-powered-by {
-    display: none; }
-
 #gdrivebox span {
   font-size: 0.9em;
   display: none; }
 
-#mc_embed_signup,
-#credits,
-#toolbar {
-  margin-bottom: 20px; }
-
 #inspiredby {
-  margin-top: 20px;
-  font-size: 0.8em; }
+  margin-top: 20px; }
 
 .no-touch .mfp-close:hover {
   color: #ffffff; }
@@ -964,7 +931,7 @@ input.labelauty + label > span.labelauty-checked-image {
 
 #rename-input {
   font-size: 1.3em;
-  font-family: 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: lighter;
   margin-right: 16px;
   text-transform: capitalize; }
@@ -1061,29 +1028,66 @@ div#sharebox {
 #footer {
   padding: 2rem 2rem 100px;
   background-color: #f1f1f1;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
   text-align: center; }
 
 #springboard {
-  margin-top: 20px; }
+  margin: 0 auto; }
+
+.twitterCard {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #DEDEDE;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+  .twitterCard img {
+    width: 24px;
+    border-radius: 32px;
+    vertical-align: middle; }
+  .twitterCard p {
+    vertical-align: middle;
+    display: inline;
+    margin-left: 8px;
+    color: #666; }
+
+#uxstore.twitterCard img {
+  width: 88px;
+  border-radius: 0; }
+
+.no-touch .twitterCard:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+          box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24); }
+
+@media screen and (max-width: 365px) {
+  .footerToolbar {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; } }
 
 .footerColumn {
   margin: 1em 0;
   width: 100%; }
-  .footerColumn h4 {
-    text-align: left;
+  .footerColumn h3 {
+    font-size: 20px;
     margin: 10px 0;
+    font-weight: 600; }
+  .footerColumn h4 {
+    margin: 20px 0 10px;
     font-weight: 400; }
   .footerColumn #toolbar {
-    text-align: center; }
+    text-align: center;
+    margin: 20px 0; }
   @media screen and (min-width: 900px) {
     .footerColumn {
       margin: 0;
-      width: auto; }
+      width: auto;
+      text-align: left; }
+      .footerColumn h3, .footerColumn h4 {
+        text-align: left; }
       .footerColumn #toolbar {
         text-align: right; } }
 
@@ -1742,8 +1746,9 @@ body,
   .buy-banner--wrapper--is-unfolded .buy-banner--content {
     max-height: 200px; }
 
+#buy-banner--image,
 .buy-banner--image {
-  display: block;
+  display: inline-block;
   width: 100%;
   cursor: pointer; }
 

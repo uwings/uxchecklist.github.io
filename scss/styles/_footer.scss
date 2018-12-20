@@ -1,14 +1,51 @@
 
-#footer {    
+#footer {
     padding: 2rem 2rem 100px;  
     background-color: $light;
-    justify-content: space-around;
+    // justify-content: space-between;
     align-items: normal;
     text-align: center;
 }
 
 #springboard {
-    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.twitterCard {
+	display: inline-block;
+	background: $white;
+	border: 1px solid $lighter2;
+	padding: 8px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+
+	img {
+		width: 24px;
+    	border-radius: 32px;
+    	vertical-align: middle;
+	}
+	p {
+    	vertical-align: middle;
+	    display: inline;
+	    margin-left: 8px;
+	    color: $grayDark;
+	}
+}
+
+#uxstore.twitterCard img {
+	width: 88px;
+    border-radius: 0;
+}
+
+.no-touch .twitterCard:hover {
+	text-decoration: none;
+    box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
+}
+
+@media screen and (max-width: 365px) {
+	.footerToolbar {
+		order: -1;
+	}
 }
 
 .footerColumn {
@@ -16,20 +53,31 @@
 	margin: 1em 0;
 	width: 100%;
 
-	h4 {
-		text-align: left;
+	h3 {
+		font-size: 20px;
 		margin: 10px 0;
+		font-weight: 600;
+	}
+
+	h4 {
+		margin: 20px 0 10px;
 		font-weight: 400;
 	}
 
 
 	#toolbar { 
 	    text-align: center;
+    	margin: 20px 0;
 	}
 
 	@media screen and (min-width: 900px) {
 		margin: 0;
 		width: auto; 
+		text-align: left;
+
+		h3, h4 {
+			text-align: left;
+		}
 
 		#toolbar {
 		    text-align: right;

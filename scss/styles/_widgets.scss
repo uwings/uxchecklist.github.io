@@ -1,10 +1,14 @@
 #footer .typeform-share {
     display: inline-block;
-    margin-left: 10px;
 }
 
 .no-touch #footer .typeform-share:hover {
     background-color: $blueLight;
+}
+
+.no-touch #friends button:hover {
+    background: none;
+    color: $grayDarker;
 }
 
 .fb_iframe_widget span {
@@ -40,7 +44,7 @@
     border-radius: 2px;
     text-align: left;
     width: 430px;
-    margin: 0;
+    margin: 0 auto;
 
     a {
         padding: 16px;
@@ -53,7 +57,6 @@
 
         a {
             white-space: normal;
-            text-decoration: underline;
         }
     }
 
@@ -71,49 +74,15 @@
     box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
 }
 
-
-#mm-embedded-form {
-    display: flex;
-    margin: 0.5rem auto 2rem;
-    vertical-align: middle;
-    align-items: center;
-    justify-content: center;
-
-    .mm-field{
-        width: 250px;
-        margin: 0 .8rem;
-    }    
-    button {
-        background-color: $buttonBackground;
-        color: $white;
-        font-weight: 300;
-        &:hover {
-            background-color: $buttonBackgroundHover;
-        }
-    }
-    label,
-    .mm-powered-by {
-        display: none;
-    }
-}
-
 #gdrivebox {
-
     span {
         font-size: 0.9em;
         display: none;
     }
 }
 
-#mc_embed_signup,
-#credits,
-#toolbar {
-    margin-bottom: 20px;
-}
-
 #inspiredby {
     margin-top: 20px;
-    font-size: 0.8em;
 }
 
 .no-touch .mfp-close:hover {
