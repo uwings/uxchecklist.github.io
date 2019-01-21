@@ -551,99 +551,81 @@
                     </form>
 
 
-                    <footer id="footer" class="flexcontainer hide-for-print">
+                    
+    <footer id="footer" class="flexcontainer hide-for-print">
 
-                        <div class="footerColumn hide-for-print">
-                            <h4>Read the story on Medium</h4>
-                            <div id="articlePopUp" class="">
-                                <a target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
-                                    <img src="img/medium-author.png" alt="Author: Andrea" width="160">
-                                    <img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
-                                    <h2>UX Project Checklist — Why I made it and what’s next</h2>
-                                </a>
-                            </div>
-                            <div id="springboard" class="">
-                                <h4>Get $250 OFF and learn UX</h4>
-                                <a target="_blank" href="https://www.springboard.com/invite/XUCZ1/">
-                                    <img src="img/springboard.png" alt="Learn UX on Springboard">
-                                </a>
-                            </div>
-                        </div>
+        <div class="footerColumn hide-for-print">
+            <h3>Learn more</h3>
+            <h4>Read the story on Medium</h4>
+            <div id="articlePopUp" class="">
+                <a id="mediumLink" target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
+                    <img src="img/medium-author.png" alt="Author: Andrea" width="160">
+                    <img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
+                    <h2>UX Project Checklist — Why I made it and what’s next</h2>
+                </a>
+            </div>
+            <h4>Get $250 OFF on Springboard courses</h4>
+            <div id="springboard" class="">
+                <a id="springboardLink" target="_blank" href="https://www.springboard.com/invite/XUCZ1/">
+                    <img src="img/springboard.png" alt="Learn UX on Springboard">
+                </a>
+            </div>
+        </div>
 
-                        <div class="footerColumn flexgrow">
-                            <div id="credits">Created by&nbsp;<a href="https://twitter.com/sovesove" target="_blank">@sovesove</a>
-                            </div>
-                            <div class="hide-for-print clearfix">
-                                <a class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Tell us what you think!</a>
-                                <script>
-                                (function() {
-                                    var qs, js, q, s, d = document,
-                                        gi = d.getElementById,
-                                        ce = d.createElement,
-                                        gt = d.getElementsByTagName,
-                                        id = 'typef_orm',
-                                        b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
-                                    if (!gi.call(d, id)) {
-                                        js = ce.call(d, 'script');
-                                        js.id = id;
-                                        js.src = b + 'share.js';
-                                        q = gt.call(d, 'script')[0];
-                                        q.parentNode.insertBefore(js, q)
-                                    }
-                                    id = id + '_';
-                                    /*if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}*/
-                                })()
-                                </script>
-                            </div>
-                            <div id="inspiredby" class="hide-for-print clearfix"><a href="#friends" class="open-popup-link">Friends of this page</a></div>
-                            <div id="friends" class="white-popup mfp-hide">
-                                <p>
-                                    Special thanks to:</br>
-                                    <a href="https://twitter.com/alefranz" target="_blank">@alefranz</a> for the technical magic.</br>
-                                </p>
-                                <p>
-                                    Inspired by&nbsp;<a href="http://webdesignerschecklist.com/" target="_blank">this</a>,&nbsp;<a href="https://stayintech.com/info/UX" target="_blank">this</a>&nbsp;and&nbsp;<a href="http://ixdchecklist.com/" target="_blank">this</a>
-                                </p>
-                                <p>
-                                    Also thanks to:</br>
-                                    <a href="http://www.manuelalangella.com/" target="_blank">Manuela</a> for the superb illustrated icons.</br>
-                                    <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a> for this responsive modal popup.</br>
-                                    <a href="http://garlicjs.org/" target="_blank">GarlicJs</a> for the garlic, which everyone knows helps you save digital things locally in your browser.</br>
-                                    <a href="http://fntneves.github.io/jquery-labelauty/" target="_blank">Labelauty</a> for the checkbox beautifier.</br>
-                                    <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> for the iconic font.</br>
-                                </p>
-                            </div>
-                        </div>
+        <div class="footerColumn">
+            <h3>About</h3>
+            <h4 id="credits">Created by</h4>
+            <a id="sovesove" class="twitterCard" href="https://twitter.com/sovesove" target="_blank"><img src="https://avatars.io/twitter/sovesove" alt=""><p>@sovesove</p></a></br>
+            <h4 id="inspiredby" class="hide-for-print clearfix">Friends</h4>
+            <a id="alefranz" class="twitterCard" href="https://twitter.com/alefranz" target="_blank"><img src="https://avatars.io/twitter/alefranz" alt=""><p>@alefranz</p></a></br>
+            <a id="uxstore" class="twitterCard" href="https://www.uxstore.com" target="_blank"><img src="/img/uxstore.png" alt="www.uxstore.com"></a></br>
+            <a id="friendsPopup" href="#friends" class="open-popup-link">Other credits</a></br>
 
-                        <div class="footerColumn">
-                            <div id="toolbar" class="hide-for-print">
-                                <button id="print" type="button"><i class="fa fa-print"></i>Print</button>
-                                <a id="github" class="button" href="https://github.com/uxchecklist/uxchecklist.github.io" target="_blank"><i class="fa fa-github"></i>Fork</a>
-                            </div>
-                        </div>
-                        
-                    </footer>
+            <div id="friends" class="white-popup mfp-hide">
+                <p>
+                    Inspired by&nbsp;<a href="http://webdesignerschecklist.com/" target="_blank">this</a>,&nbsp;<a href="https://stayintech.com/info/UX" target="_blank">this</a>&nbsp;and&nbsp;<a href="http://ixdchecklist.com/" target="_blank">this</a>
+                </p>
+                <p>
+                    Also thanks to:</br>
+                    <a href="http://www.manuelalangella.com/" target="_blank">Manuela</a> for the superb illustrated icons.</br>
+                    <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a> for this responsive modal popup.</br>
+                    <a href="http://garlicjs.org/" target="_blank">GarlicJs</a> for the garlic, which everyone knows helps you save digital things locally in your browser.</br>
+                    <a href="http://fntneves.github.io/jquery-labelauty/" target="_blank">Labelauty</a> for the checkbox beautifier.</br>
+                    <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> for the iconic font.</br>
+                </p>
+            </div>
+        </div>
+
+        <div class="footerColumn footerToolbar">
+            <h3>Tools</h3>
+            <div id="toolbar" class="hide-for-print">
+                <button id="print" type="button"><i class="fa fa-print"></i>Print</button>
+                <a id="github" class="button" href="https://github.com/uxchecklist/uxchecklist.github.io" target="_blank"><i class="fa fa-github"></i>Fork</a>
+            </div>
+        </div>
 
 
-                    <div id="buy-banner" class="buy-banner--wrapper buy-banner--wrapper--is-folded hide-for-print">
-                        <div class="buy-banner--inner">
-                            <span id="buy-banner-toggle" class="buy-banner--toggle">
-                                <i class="fa fa-chevron-up"></i>
-                            </span>
-                            <div class="buy-banner--header">
-                                <div id="buy-banner-toggle" class="buy-banner--text">
-                                    <p>LOVE THIS?
-                                        <br> Put it on your wall!</p>
-                                </div>
-                                <a id="buy-banner--button" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank" class="buy-banner--button">get the poster</a>
-                            </div>
-                            <div class="buy-banner--content">
-                                <a href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
-                                    <img src="img/banner.png" alt="" class="buy-banner--image">
-                                </a>
-                            </div>
-                        </div>
+        <div id="buy-banner" class="buy-banner--wrapper buy-banner--wrapper--is-folded hide-for-print">
+            <div class="buy-banner--inner">
+                <span id="buy-banner-toggle" class="buy-banner--toggle">
+                    <i class="fa fa-chevron-up"></i>
+                </span>
+                <div class="buy-banner--header">
+                    <div id="buy-banner-toggle" class="buy-banner--text">
+                        <p>LOVE THIS?
+                            <br> Put it on your wall!</p>
                     </div>
+                    <a id="buy-banner--button" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank" class="buy-banner--button">get the poster</a>
+                </div>
+                <div class="buy-banner--content">
+                    <a id="buy-banner--image" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
+                        <img src="img/banner.jpg" alt="" class="buy-banner--image">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
 
 
 
