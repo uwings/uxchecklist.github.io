@@ -886,10 +886,6 @@ input.labelauty + label > span.labelauty-checked-image {
   -webkit-box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24);
           box-shadow: 0 0px 16px rgba(53, 53, 53, 0.24); }
 
-#gdrivebox span {
-  font-size: 0.9em;
-  display: none; }
-
 #inspiredby {
   margin-top: 20px; }
 
@@ -966,7 +962,8 @@ div#sharebox {
 
 #gdrivebox span {
   font-size: 0.9em;
-  display: none; }
+  display: none;
+  vertical-align: top !important; }
 
 #header {
   padding: 0 16px;
@@ -1156,7 +1153,8 @@ body,
   height: 100%;
   background: #48a770;
   -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  overflow: scroll; }
 
 .st-menu::after {
   position: absolute;
