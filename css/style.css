@@ -813,10 +813,6 @@ button,
   background-color: #999;
   color: #ffffff; }
 
-#gdrivebox span {
-  font-size: 0.9em;
-  display: none; }
-
 #patreonBtn {
   display: block;
   margin: 0;
@@ -929,8 +925,7 @@ input.labelauty + label > span.labelauty-checked-image {
   font-size: 1.3em;
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: lighter;
-  margin-right: 16px;
-  text-transform: capitalize; }
+  margin-right: 16px; }
 
 div#sharebox {
   margin: 4px 8px 0 0; }
@@ -1001,7 +996,6 @@ div#sharebox {
 #header h1 {
   display: inline-block;
   font-size: 1.3em;
-  text-transform: capitalize;
   margin-right: 16px; }
 
 #project a {
@@ -1196,7 +1190,6 @@ body,
   -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
           box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
   color: #f3efe0;
-  text-transform: uppercase;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
   letter-spacing: 1px;
   font-weight: 400;

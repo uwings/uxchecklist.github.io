@@ -130,12 +130,13 @@ $().ready(function() {
         });
     }
 
-    $('#project-title').on('click', function(e) {
+    $('#project-title, #rename').on('click', function(e) {
         ga('send', 'event', 'rename', 'click', 'show');
         var inputField = $('#rename-input');
         $('#project-title').hide();
         inputField.val($("#project-title").text());
         inputField.show();
+        $('#reset, #rename, #file-delete').hide();
         inputField.focus();
         inputField.select()
     });
@@ -143,6 +144,7 @@ $().ready(function() {
     $('#rename-input').on('blur', function(e) {
         $('#rename-input').hide();
         $('#project-title').show();
+        $('#reset, #rename, #file-delete').show();
     });
 
     $('#rename-input').on('keydown', function(e) {
@@ -154,17 +156,20 @@ $().ready(function() {
             if (newTitle !== $("#project-title").text()) {
                 $('#rename-input').hide();
                 $('#project-title').show();
+                $('#reset, #rename, #file-delete').show();
                 $("#project-title").text(newTitle);
                 renameProject(newTitle);
             } else {
                 $('#rename-input').hide();
                 $('#project-title').show();
+                $('#reset, #rename, #file-delete').show();
             }
         }
 
         if (code == 27) { //Esc keycode
             $('#rename-input').hide();
             $('#project-title').show();
+            $('#reset, #rename, #file-delete').show();
         }
     });
 
