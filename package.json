@@ -5,9 +5,9 @@
     "http-server": "^0.11.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.26.3",
     "gift": "^0.10.2",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-cached": "^1.1.0",
     "gulp-concat": "^2.6.0",

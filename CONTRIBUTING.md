@@ -1,39 +1,34 @@
-# UX CHECKLIST DEV GUIDELINES
----
-#### Development tools from https://github.com/una/gulp-starter-env/blob/master/README.md + http-server
-
-## Starter Environment
+# CONTRIBUTING
 ---
 
-What's set up here:
+## Development Environment
+
+Includes:
+
 - http-server
 - Sass (LibSass)
 - Autoprefixer
 - CSS Minification
 - Scss Lint (based on [this](https://github.com/causes/scss-lint/blob/master/config/default.yml) config)
 
-
-## To Get Started:
+## SetUp Environment
 
 ### Install
-1. Install node and make sure npm (Node Package Manager) is also [installed](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm)
-2. In terminal, `cd` (change directory) to the folder containing your project.
-3. `npm install` or `npm i` to download dependancies
 
-- 3.1 Install Gulp with `npm install gulp -g` - `-g` installs gulp globally on your system - see [Gulp.js](https://gulpjs.com/) - this might be optional
-4. open a second terminal window in your working directory
+1. Install latest LTS release of Node.js (https://nodejs.org/en/download/)
+1. Execute on a terminal `npm install` to download dependencies
 
-### GULP / build - in terminal 1
-5. In the terminal, enter `gulp` to make everything run 
+### Build
+On a dedicated terminal run `npx gulp` and leave it running.
 
-#### What does this do ?
 - this will compile SCSS files to CSS - thats all, for more advanced gulp, look at the gulpfile)
 - When you change some SCSS, it will automatically create a new CSS file
 - *DO NOT* : write in CSS files, write in CSS/ folder, write in dist/ folder
 - In the terminal, you will see errors if the SCSS needs correction (closing bracket, parethesis, semicolon...)
 
-### SERVE / http-server - in terminal 2
-7. In the terminal 2, enter `http-server` to serve your site (probably at http://localhost:8080)
+### Server
+
+1. On another terminal execute `npx http-server` to serve your site (probably at http://localhost:8080)
 
 
 ## DEV Single and Multi projects

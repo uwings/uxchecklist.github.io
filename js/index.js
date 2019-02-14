@@ -210,7 +210,7 @@ $().ready(function() {
     if (ids) {
         ga('send', 'event', 'file', 'open_by_id', 'file');
     }
-    gapi.load("auth:client,drive-realtime,drive-share", function() {
+    gapi.load("auth:client,drive-share", function() {
         controller.init();
         $('form').on('change', 'input:checkbox', function(ev) {
             log(ev);
