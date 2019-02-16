@@ -189,6 +189,7 @@ $().ready(function() {
         return $(e).is(':checked');
     };
     var setFn = function(id, e, val) {
+        log("setting " + e.id + " as " + val);
         $(e).prop('checked', val);
     };
     $('input:checkbox').each(function() {

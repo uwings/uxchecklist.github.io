@@ -49,8 +49,9 @@ Realtime.Controller.prototype.loaded = function(result) {
   this.log(keys);
   for (var i=0; i < keys.length; i++) {
     var key = keys[i];
-    var val = values[i];
+    var val = values[i] == "true";
     this.log("loaded " + key + " as " + val);
+    this.log(this.view.checkboxes);
     this.view.checkboxes[key].setChecked(val);
   }
   this.log("ready!");
@@ -58,14 +59,15 @@ Realtime.Controller.prototype.loaded = function(result) {
 };
 
 Realtime.Controller.prototype.onCheckBoxChange = function(key) {
+  var self = this;
   var value = this.view.checkboxes[key].isChecked();
-  this.log("saved " + key + " as " + value);
   this.uxchecklist[key] = value;
   gapi.client.drive.properties.insert({fileId: this.fileId, resource: {
     key: key,
-    value: true
+    value: value
   }}).then(
     function(r) {
+      self.log("saved " + key + " as " + value);
     }
   );
 };
@@ -119,13 +121,22 @@ Realtime.Controller.prototype.initializeModel = function(model) {
 };
 
 Realtime.Controller.prototype.save = function(uxchecklist) {
+  var self = this;
+  var batch = gapi.client.newBatch();
+  var buildRequest = function(key, value) {
+    return gapi.client.drive.properties.insert({fileId: self.fileId, resource: {
+      key: key,
+      value: value
+    }});
+  };
   uxchecklist = uxchecklist || this.uxchecklist;
   for(var key in this.view.checkboxes) {
     var cb = this.view.checkboxes[key];
     var value = cb.isChecked();
-    uxchecklist.checkboxes.set(key, value);
-    //this.log("saved " + key + " as " + value);
+    self.log("saving " + key + " as " + value);
+    batch.add(buildRequest(key, value));
   }
+  batch.then(function(r){self.log(r);});
 };
 
 Realtime.Controller.prototype.rename = function(newTitle, success) {
@@ -178,12 +189,8 @@ Realtime.Controller.prototype.openFile = function(title, callback) {
           self.log("create");
           gapi.client.drive.files.insert({
             resource: {
-              title: title,
-            },
-            media: {
               mimeType: mimeType,
-              body: "{}",
-              fields: 'id'
+              title: title
             }
           }).execute(callback);
         } else {
