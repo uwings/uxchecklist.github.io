@@ -47,6 +47,11 @@ Realtime.Controller.prototype.loaded = function(result) {
   var keys = this.uxchecklist.map(function(x){return x.key});
   var values = this.uxchecklist.map(function(x){return x.value});
   this.log(keys);
+  for(var key in this.view.checkboxes) {
+    var cb = this.view.checkboxes[key];
+    cb.setChecked(false);
+  }
+  this.log(keys);
   for (var i=0; i < keys.length; i++) {
     var key = keys[i];
     var val = values[i] == "true";
