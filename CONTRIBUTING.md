@@ -16,7 +16,8 @@ Includes:
 ### Install
 
 1. Install latest LTS release of Node.js (https://nodejs.org/en/download/)
-1. Execute on a terminal `npm install` to download dependencies
+2. Make sure to `sudo apt-get install libpng-dev` as it is a requirement to compile the `imagemin-pngquant` library on your machine 
+3. Execute on a terminal `npm install` to download dependencies
 
 ### Build
 On a dedicated terminal run `npx gulp` and leave it running.
@@ -51,8 +52,7 @@ Js for Multi goes int js/index-single.js
 
 **The CSS way** :
 
-```
-
+```css
 #reset {
     font-size: 1rem
 }
@@ -69,7 +69,7 @@ Js for Multi goes int js/index-single.js
 
 **The SCSS way** :
 
-```
+```scss
 #reset {
 	font-size: 1rem;
 
