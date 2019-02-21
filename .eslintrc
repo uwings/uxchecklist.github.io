@@ -37,6 +37,9 @@
         "props": false
       }
     ],
+    "semi": [
+      "error", "always", {}
+    ],
     "comma-dangle": [
       "error", {
         "arrays": "always-multiline",
