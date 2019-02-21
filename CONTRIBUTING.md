@@ -20,7 +20,7 @@ Includes:
 3. Execute on a terminal `npm install` to download dependencies
 
 ### Build
-On a dedicated terminal run `npx gulp` and leave it running.
+On a dedicated terminal run `npx gulp` or `npm run dev` and leave it running.
 
 - this will compile SCSS files to CSS - thats all, for more advanced gulp, look at the gulpfile)
 - When you change some SCSS, it will automatically create a new CSS file
@@ -29,7 +29,7 @@ On a dedicated terminal run `npx gulp` and leave it running.
 
 ### Server
 
-1. On another terminal execute `npx http-server` to serve your site (probably at http://localhost:8080)
+1. On another terminal execute `npx http-server` or `npm run serve` to serve your site (probably at http://localhost:8080)
 
 
 ## DEV Single and Multi projects
@@ -114,15 +114,16 @@ If you're using a text editor like Sublime, I'd recommend installing `SublimeLin
 
 ## Deploying to gh-pages
 
-You can run `gulp deploy` to push your site onto the gh-pages branch. Then, you can navigate to it via *http://< your-github-username >.github.io/< project-name >* **Note:** this doesn't work if your project name is *< your-github-username  >.github.io*.
+You can run `npm run deploy` to push your site onto the gh-pages branch. Then, you can navigate to it via *http://< your-github-username >.github.io/< project-name >* **Note:** this doesn't work if your project name is *< your-github-username  >.github.io*.
 
-`gulp deploy` might fail at first if you just installed 
+`npm run deploy` might fail at first if you just installed 
 
-``cd node_modules/gulp-gh-pages/
+```
+cd node_modules/gulp-gh-pages/
 npm install --save gift@0.10.2
 cd ../../
 gulp deploy
-``
+```
 
 ## Commonly Confusing Terms
 
