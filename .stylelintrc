@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["function", "if", "each", "for", "include", "mixin", "extend", "return"]
+    }],
+    "number-leading-zero": "never",
+    "max-empty-lines": 2,
+    "no-descending-specificity": null
+  }
+}
