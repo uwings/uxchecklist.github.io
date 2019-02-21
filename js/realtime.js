@@ -25,13 +25,9 @@ Realtime.Controller.prototype.isLoaded = function() {
   return this.uxchecklist != null;
 };
 
-Realtime.Controller.prototype.loaded = function(result) {
-  console.log('Realtime.loaded invoke', result);
-  
+Realtime.Controller.prototype.loaded = function(result) {  
   var model = result.properties;
   this.uxchecklist = model || [];
-  
-  console.log('Realtime.loaded model', this.uxchecklist, model);
 
   var self = this;
 
@@ -46,9 +42,6 @@ Realtime.Controller.prototype.loaded = function(result) {
   });
 
   var mergedData = Object.assign({}, resetData, syncData);
-
-  console.log('Merge data mapped:', mergedData);
-  console.log('Sync data mapped:', syncData);
 
   Object.keys(mergedData).map(function (x) {
     self.view.checkboxes[x].setChecked(mergedData[x]);
