@@ -1,0 +1,53 @@
+{
+  "extends": "standard",
+  "env": {
+    "browser": true,
+    "node": false,
+    "es6": false
+  },  
+  "parserOptions": {
+    "ecmaVersion": 5
+  },
+  "rules": {
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn"]
+      }
+    ],
+    "no-mixed-operators": [
+      "error"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreComments": true
+      }
+    ],
+    "no-plusplus": [
+      "error", 
+      { 
+        "allowForLoopAfterthoughts": true 
+      }
+    ],
+    "no-param-reassign": [
+      "error", 
+      { 
+        "props": false
+      }
+    ],
+    "semi": [
+      "error", "always", {}
+    ],
+    "comma-dangle": [
+      "error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "never",
+        "exports": "never",        
+        "functions": "ignore"
+      }
+    ]    
+  }
+}
