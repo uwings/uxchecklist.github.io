@@ -6,6 +6,12 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
+    "eslint": "^5.14.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "gift": "^0.10.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
@@ -24,10 +30,16 @@
     "gulp-size": "^3.0.0",
     "gulp-uglify": "^3.0.0",
     "imagemin-pngquant": "^5.0.1",
-    "jshint": "^2.9.1"
+    "jshint": "^2.9.1",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0"
   },
   "scripts": {
+    "build": "gulp build",
     "dev": "gulp",
-    "serve": "http-server"
+    "deploy": "gulp deploy",
+    "lint": "eslint --color ./js/*.js && stylelint './scss/*.scss,./scss/**/*.scss' --color",
+    "serve": "http-server",
+    "start": "npm run dev"
   }
 }
