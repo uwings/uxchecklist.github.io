@@ -137,7 +137,7 @@ gulp.task('imgmin', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build', ['js', 'imgmin', 'minify-html', 'scss', 'watch']);
-gulp.task('dist', ['build', 'browser-sync']);
+gulp.task('build', ['js', 'imgmin', 'minify-html', 'scss']);
+gulp.task('dist', ['build', 'browser-sync', 'watch']);
 gulp.task('deploy', ['build', 'gh-pages']);
 gulp.task('default', ['scssLight', 'watchSass']);
