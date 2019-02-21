@@ -26,40 +26,34 @@ Realtime.Controller.prototype.isLoaded = function() {
 };
 
 Realtime.Controller.prototype.loaded = function(result) {
-  this.log(result);
+  console.log('Realtime.loaded invoke', result);
+  
   var model = result.properties;
   this.uxchecklist = model || [];
-  this.log(this.uxchecklist);
-  //this.log(this.uxchecklist.version);
+  
+  console.log('Realtime.loaded model', this.uxchecklist, model);
 
-  // var self = this;
-  // this.uxchecklist.checkboxes.addEventListener(gapi.drive.realtime.EventType.VALUE_CHANGED, function(value){
-  //   self.log(value);
-  //   if (!value.isLocal)
-  //   {
-  //     var key = value.property;
-  //     var val = value.newValue;
-  //     self.log("changed " + key + " as " + val);
-  //     self.view.checkboxes[key].setChecked(val);
-  //   }
-  // });
+  var self = this;
 
-  var keys = this.uxchecklist.map(function(x){return x.key});
-  var values = this.uxchecklist.map(function(x){return x.value});
-  this.log(keys);
-  for(var key in this.view.checkboxes) {
-    var cb = this.view.checkboxes[key];
-    cb.setChecked(false);
-  }
-  this.log(keys);
-  for (var i=0; i < keys.length; i++) {
-    var key = keys[i];
-    var val = values[i] == "true";
-    this.log("loaded " + key + " as " + val);
-    this.log(this.view.checkboxes);
-    this.view.checkboxes[key].setChecked(val);
-  }
-  this.log("ready!");
+  var syncData = {};
+  this.uxchecklist.map(function (x) {
+    syncData[x.key] = (x.value === 'true') ? true : false;
+  });
+
+  var resetData = {};
+  Object.keys(this.view.checkboxes).map(function (x) {
+    resetData[ self.view.checkboxes[x].id ] = false;
+  });
+
+  var mergedData = Object.assign({}, resetData, syncData);
+
+  console.log('Merge data mapped:', mergedData);
+  console.log('Sync data mapped:', syncData);
+
+  Object.keys(mergedData).map(function (x) {
+    self.view.checkboxes[x].setChecked(mergedData[x]);
+  });
+
   $('#overlay').fadeOut();
 };
 
@@ -101,14 +95,30 @@ Realtime.Controller.prototype.open = function(id, title) {
   gapi.client.drive.files.get({fileId: id}).then(
     function(r) {
         self.log(r);
-        self.listFiles(function (files){
+        self.listFiles(function(files){
           self.log(self.view.fileList);
           self.view.fileList.set(
             files.map(function(file) {return file.title;}),
             files.filter(function(file){return file.id == id;})[0].title,
             id
-            );
-          self.loaded(r.result);
+          );
+          var found = false;
+
+          for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            if (file.id === r.result.id) {
+              found = true;
+
+              if (file.version >= r.result.version) {
+                self.loaded(file);
+                return;
+              }
+            }
+          }
+
+          if (!found) {
+            self.loaded(r.result);
+          }
         });
     });
     // function(model) { self.initializeModel(model, false); });
