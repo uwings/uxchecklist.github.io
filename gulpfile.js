@@ -77,7 +77,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('deploy', function () {
+gulp.task('gh-pages', function () {
     return gulp.src('dist/**/*')
         .pipe(deploy());
 });
@@ -137,5 +137,7 @@ gulp.task('imgmin', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('dist', ['browser-sync', 'js', 'imgmin', 'minify-html', 'scss', 'watch']);
+gulp.task('build', ['js', 'imgmin', 'minify-html', 'scss', 'watch']);
+gulp.task('dist', ['build', 'browser-sync']);
+gulp.task('deploy', ['build', 'gh-pages']);
 gulp.task('default', ['scssLight', 'watchSass']);

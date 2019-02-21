@@ -28,6 +28,7 @@
   },
   "scripts": {
     "dev": "gulp",
-    "serve": "http-server"
+    "serve": "http-server",
+    "start": "npm run dev"
   }
 }
