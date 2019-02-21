@@ -88,9 +88,9 @@ var renameProject = function(newTitle) {
 
 $().ready(function() {
     var setTitles = function(titles, selectedTitle, fileId, e) {
-        log(titles);
-        log(selectedTitle);
-        log(fileId);
+        //log(titles);
+        //log(selectedTitle);
+        //log(fileId);
         var newTitle = defaultTitle;
         var titleCounter = 0;
         var titleTest = function(title, _) {
@@ -99,7 +99,7 @@ $().ready(function() {
         while (titles.some(titleTest)) {
             newTitle = defaultTitle + (++titleCounter);
         }
-        log(newTitle);
+        //log(newTitle);
         $("#project h1").text(selectedTitle);
         $(e).empty();
         $(titles).each(function(_, title) {
@@ -125,7 +125,7 @@ $().ready(function() {
             shareClient.setItemIds([fileId]);
             $('#file-share').on('click', function() {
                 ga('send', 'event', 'share', 'click', 'share');
-                shareClient.showSettingsDialog();
+                shareClient.showSettingsDia//log();
             });
         });
     }
@@ -189,7 +189,7 @@ $().ready(function() {
         return $(e).is(':checked');
     };
     var setFn = function(id, e, val) {
-        log("setting " + e.id + " as " + val);
+        //console.log('setting', e.id, val);
         $(e).prop('checked', val);
     };
     $('input:checkbox').each(function() {
@@ -198,7 +198,7 @@ $().ready(function() {
     });
     view = new Realtime.View(fileList, checkboxes);
     var cb = view.checkboxes;
-    log(cb);
+    //log(cb);
     controller = new Realtime.Controller(view);
 
     var getParam = function(name) {
@@ -207,19 +207,19 @@ $().ready(function() {
     };
 
     var title = getParam('title');
-    log(title);
+    //log(title);
     if (title) {
         ga('send', 'event', 'file', 'open_by_title', 'file');
     }
     var ids = getParam('ids');
-    log(ids);
+    //log(ids);
     if (ids) {
         ga('send', 'event', 'file', 'open_by_id', 'file');
     }
     gapi.load("auth:client,drive-share", function() {
         controller.init();
         $('form').on('change', 'input:checkbox', function(ev) {
-            log(ev);
+            //log(ev);
             if (controller.isLoaded()) {
                 controller.onCheckBoxChange($(ev.target).attr('id'));
             }
@@ -243,7 +243,7 @@ $().ready(function() {
             $('#header').removeClass('loading');
             $("#checklist-form").garlic();
             useGarlic = true;
-            log("Local storage enabled");
+            //log("Local storage enabled");
         };
 
         controller.auth(true,
@@ -254,7 +254,7 @@ $().ready(function() {
                 $('#header').removeClass('loading');
                 $("#checklist-form").garlic();
                 useGarlic = true;
-                log("Local storage enabled");
+                //log("Local storage enabled");
             },
             title,
             ids,
