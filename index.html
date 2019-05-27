@@ -10,134 +10,29 @@
     <meta property="og:title" content="UX Project Checklist" />
     <meta property="og:ulr" content="http://uxchecklist.github.io/" />
     <meta property="og:image" content="http://uxchecklist.github.io/apple-touch-icon.png" />
-    <meta property="og:description" content="Start your next UX project with this checklist and don't forget about anything!" />
-    <meta name="google-site-verification" content="3Dof5ybDW6vSpHqG5nnJubTZeQ9mYWihL5mPP02FxtA" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-    <!-- moonmail.io embedded form styles (for better performance put this link in html head of your page) -->
     <link rel="stylesheet" href="https://static.moonmail.io/mm-embedded-form.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <!-- <script src="js/vendor/modernizr.js"></script> -->
-    <!-- GA plugin -->
-    <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    if (document.location.hostname == "uxchecklist.github.io") {
-        ga('create', 'UA-57141076-1', 'auto');
-    } else if (document.location.hostname == "localhost") {
-        ga('create', 'UA-57141076-2', 'auto');
-    }
-    ga('send', 'pageview');
-    </script>
 </head>
 
 <body class="body-single">
-    <div id="fb-root"></div>
-    <script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=118274511611887&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
     <div id="printTitle" class="hidden">Project name: ________________________</div>
     <header id="header" class="flexcontainer">
         <div id="title" class="hide-for-print">
             <h1>UX Project Checklist</h1>
         </div>
-        <div id="gdrivebox" class="hide-for-print flexgrow">
-            <span id="signin-do">
-                    <button id="signin"><i class="fa fa-sign-in"></i>Sign in with Google</button> to sync across devices.
-                    <a href="#signin-info" class="open-popup-link"></a>
-                </span>
-            <span id="signin-failed">Sign in failed! :(</span>
-            <span id="signin-success">You're signed in with Google.</span>
-            <div id="signin-info" class="white-popup mfp-hide">
-                <p>We use Google Drive to create and save a file on your account so you will be able to open the same checklist on all your connected devices.
-                </p>
-                <p>
-                    And guess what?! You can share it! </br>
-                    Well, yeah is not a big deal, but it come for free, yes like everything else, what I mean is that we didn't had to do anything for that, right? So basically you connect with Google, we create the file, you go to your Google Drive folder, try to find the new file, I have no idea where it is or what the name will be, the <a href="https://twitter.com/alefranz" target="_blank">guy</a> who did this didn't tell us, once you've found the file share it with your friends. Done! </br>
-                    When your friends connect their Google account they should see the same checklist status. </br>
-                    Magic isn't it? No! That's technology fool!
-                </p>
-                <p>Also, we will not use any of your data, we didn't have any kind of database or save something somewhere in any way, the file we create is yours and yours only and is the only thing we are able to do right now.
-                </p>
-                <p>
-                    Oh, and just want to remind you that if you still not believe it, everything is open source and you can check the github repo <a href="https://github.com/uxchecklist/uxchecklist.github.io" target="_blank">here</a> (feel free to fork it and do awesome things, or help us make it better).
-                </p>
-            </div>
-        </div>
-        <div id="sharebox" class="hide-for-print">
-            <ul>
-                <li>
-                    <!-- facebook plugin -->
-                    <div class="fb-like" data-href="http://uxchecklist.github.io/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-                </li>
-                <li>
-                    <!-- linkedin plugin -->
-                    <script src="//platform.linkedin.com/in.js" type="text/javascript">
-                    lang: en_US
-                    </script>
-                    <script type="IN/Share" data-counter="right"></script>
-                </li>
-                <li>
-                    <!-- twitter plugin -->
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="UX Project Checklist: The UX Design Process From A to Z" data-via="sovesove" data-hashtags="ux,uxchecklist">Tweet</a>
-                    <script>
-                    ! function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0],
-                            p = /^http:/.test(d.location) ? 'http' : 'https';
-                        if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = p + '://platform.twitter.com/widgets.js';
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }
-                    }(document, 'script', 'twitter-wjs');
-                    </script>
-                </li>
-            </ul>
-        </div>
-        <div class="support-us-wrapper hide-for-print">
-            <!-- PayPal donate button -->
-            <div class="wrapper-paypal-button hide-for-print">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="CZJKKFXRARWJL">
-                    <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
-            <!-- PayPal donate button END -->
-            <!-- Patreon -->
-            <div class="wrapper-patreon-button hide-for-print not-released">
-                <iframe src="/widgets/patreon.html" frameborder="0" height="auto" scrolling="no" width="100%"></iframe>
-            </div>
-            <!-- Patreon END -->
-        </div>
     </header>
     <form id="checklist-form" method="POST">
         <div class="row clearfix">
-            <div id="Research" class="title"><span>Research</span></div>
+            <div id="Research" class="title"><span>研究</span></div>
             <div class="cards">
                 <div class="img">
                     <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox1">Competitive Analysis</label>
-                    <p>See how others solve similar problems and try to not reinvent the wheel. <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more<span class="visually-hidden"> about Competitive Analysis: Understanding the Market Context</span></a></p>
+                    <label for="checkbox1">竞品分析</label>
+                    <p>看看别人是如何解决相似的问题的，避免重复造轮子。                        <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more<span class="visually-hidden"> about Competitive Analysis: Understanding the Market Context</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox1" type="checkbox">
@@ -148,8 +43,8 @@
                     <img class="left" src="img/icons128/WebAnalytic.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox2">Data analysis</label>
-                    <p>Do you have all the useful data you need? Try to have a look at funnels, clicks, page views, performances... <a class="more hide-for-print" href="http://www.nngroup.com/articles/analytics-user-experience/" target="_blank">Read more<span class="visually-hidden"> about Three Uses for Analytics in User-Experience Practice</span></a></p>
+                    <label for="checkbox2">数据分析</label>
+                    <p>你需要的所有有用的数据都有吗？去看看网站的漏斗、点击量、页面访问量和性能...                        <a class="more hide-for-print" href="http://www.nngroup.com/articles/analytics-user-experience/" target="_blank">Read more<span class="visually-hidden"> about Three Uses for Analytics in User-Experience Practice</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox2" type="checkbox">
@@ -160,9 +55,9 @@
                     <img class="left" src="img/icons128/Viral-Marketing.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox3">User feedback</label>
+                    <label for="checkbox3">用户反馈</label>
                     <p></p>
-                    <p>Always speak with Customer Care team! Don't have one? Check your old surveys or videos, what your customer says? What do they actually do? <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more<span class="visually-hidden"> about An introduction to user research techniques</span></a></p>
+                    <p>保持和客服团队的沟通！没有客服？检查一下你以前的问卷或者视频，看看你的用户说了什么？他们实际上又做了什么？<a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more<span class="visually-hidden"> about An introduction to user research techniques</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox3" type="checkbox">
@@ -170,14 +65,14 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div id="Plan" class="title"><span>Plan</span></div>
+            <div id="Plan" class="title"><span>计划</span></div>
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/business-card.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox4">User stories</label>
-                    <p>Have you done personas yet? If not DO IT NOW. Ok, now use them to write down user stories and scenarios. <a class="more hide-for-print" href="http://chrbutler.com/how-to-tell-the-users-story" target="_blank">Read more<span class="visually-hidden"> about How to Tell the User’s Stor</span></a></p>
+                    <label for="checkbox4">用户故事</label>
+                    <p>你做过用户画像吗？如果没有那现在就行动起来吧。用他们来写用户故事和用户场景。                        <a class="more hide-for-print" href="http://chrbutler.com/how-to-tell-the-users-story" target="_blank">Read more<span class="visually-hidden"> about How to Tell the User’s Stor</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox4" type="checkbox">
@@ -188,8 +83,8 @@
                     <img class="left" src="img/icons128/Everflux.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox5">User flows</label>
-                    <p>Create your user's flow based on the scenarios you created, you can use it later to review the journey and create wireframes on top of each step. <a class="more hide-for-print" href="https://signalvnoise.com/posts/1926-a-shorthand-for-designing-ui-flows" target="_blank">Read more<span class="visually-hidden"> about A shorthand for designing UI flows</span></a></p>
+                    <label for="checkbox5">用户流程</label>
+                    <p>基于你的用户故事来创建用户使用流程，在这之后你还可以用它来检查你的用户流程图，基于每个步骤来创建线框图。<a class="more hide-for-print" href="https://signalvnoise.com/posts/1926-a-shorthand-for-designing-ui-flows" target="_blank">Read more<span class="visually-hidden"> about A shorthand for designing UI flows</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox5" type="checkbox">
@@ -200,8 +95,8 @@
                     <img class="left" src="img/icons128/computer.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox6">Red routes</label>
-                    <p>Define red routes for your product and you’ll be able to identify, prioritise and eliminate any usability obstacles on key user journeys. <a class="more hide-for-print" href="http://userfocus.co.uk/articles/prioritising-functions.html" target="_blank">Read more<span class="visually-hidden"> about How red routes can help you take charge of your product backlog</span></a></p>
+                    <label for="checkbox6">关键路径</label>
+                    <p>为你的产品定义关键的路径，然后你就能分辨、重视和清除任何在关键user journey上的可用性障碍。<a class="more hide-for-print" href="http://userfocus.co.uk/articles/prioritising-functions.html" target="_blank">Read more<span class="visually-hidden"> about How red routes can help you take charge of your product backlog</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox6" type="checkbox">
@@ -209,14 +104,14 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div id="Explore" class="title"><span>Explore</span></div>
+            <div id="Explore" class="title"><span>探索</span></div>
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/beer.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox7">Brainstorm & sketch</label>
-                    <p>Find a war room, fill it with markers and drinks, get together and sketch, discuss, vote, disrupt, have fun! <a class="more hide-for-print" href="http://www.gamestorming.com/the-wiki/" target="_blank">Read more<span class="visually-hidden"> about Gamestorming</span></a></p>
+                    <label for="checkbox7">头脑风暴&草图</label>
+                    <p>找个地方，带上马克笔和饮料，聚到一起来画草图，讨论，投票，辩论！<a class="more hide-for-print" href="http://www.gamestorming.com/the-wiki/" target="_blank">Read more<span class="visually-hidden"> about Gamestorming</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox7" type="checkbox">
@@ -227,8 +122,8 @@
                     <img class="left" src="img/icons128/Blog.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox8">Wireframe</label>
-                    <p>Add some details and structure to your ideas, reuse patterns and create pages on top of your user flows so you'll not leave anything behind. <a class="more hide-for-print" href="http://www.uxpin.com/guide-to-wireframing.html" target="_blank">Read more<span class="visually-hidden"> about The Guide to Wireframing</span></a></p>
+                    <label for="checkbox8">线框图</label>
+                    <p>基于用户流程，为你的想法添加细节和结构。<a class="more hide-for-print" href="http://www.uxpin.com/guide-to-wireframing.html" target="_blank">Read more<span class="visually-hidden"> about The Guide to Wireframing</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox8" type="checkbox">
@@ -239,8 +134,8 @@
                     <img class="left" src="img/icons128/API.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox9">Prototype</label>
-                    <p>You can start creating paper prototypes and continuously iterate to more functional ones. Use sketches, HTML pages or static images, then just get some people and test. <a class="more hide-for-print" href="http://uxdesignweekly.com/ux-resources/prototyping-tools/" target="_blank">Read more<span class="visually-hidden"> about Prototyping Tools</span></a></p>
+                    <label for="checkbox9">原型</label>
+                    <p>可以先在纸上画草图，然后添加功能，最终完成原型图设计。你可以在任何阶段测试你的原型。<a class="more hide-for-print" href="http://uxdesignweekly.com/ux-resources/prototyping-tools/" target="_blank">Read more<span class="visually-hidden"> about Prototyping Tools</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox9" type="checkbox">
@@ -248,14 +143,14 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div id="Communicate" class="title"><span>Communicate</span></div>
+            <div id="Communicate" class="title"><span>交互沟通</span></div>
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/Dynamic-Content.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox10">IA</label>
-                    <p>Understand your users, your data structure and your channels. How can you organise your navigation and content in a clear and consistent way? <a class="more hide-for-print" href="http://alistapart.com/article/thedisciplineofcontentstrategy" target="_blank">Read more<span class="visually-hidden"> about The Discipline of Content Strategy</span></a></p>
+                    <label for="checkbox10">信息架构</label>
+                    <p>理解你的用户，数据结构和路径。如何将你的导航和内容以清晰连贯的方式组织起来？<a class="more hide-for-print" href="http://alistapart.com/article/thedisciplineofcontentstrategy" target="_blank">Read more<span class="visually-hidden"> about The Discipline of Content Strategy</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox10" type="checkbox">
@@ -266,8 +161,8 @@
                     <img class="left" src="img/icons128/typewriter.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox11">Language</label>
-                    <p>Follow your brand personality, keep in mind users' culture and language, the context of your product and make sure they understand you. <a class="more hide-for-print" href="http://alistapart.com/article/translation-is-ux" target="_blank">Read more<span class="visually-hidden"> about Translation is UX</span></a></p>
+                    <label for="checkbox11">设计语言</label>
+                    <p>遵循你的品牌个性，牢记用户的文化和语言，产品的语境能让用户理解你的产品。<a class="more hide-for-print" href="http://alistapart.com/article/translation-is-ux" target="_blank">Read more<span class="visually-hidden"> about Translation is UX</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox11" type="checkbox">
@@ -278,15 +173,15 @@
                     <img class="left" src="img/icons128/sofa.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox12">Accessibility</label>
-                    <p>You don’t need to add extra functionality or to duplicate any content. The key is simply to assess the requirements of those with different skills and limited devices. <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/accessibility.html" target="_blank">Read more <span class="visually-hidden"> about GOV.UK Accessibility</span></a></p>
+                    <label for="checkbox12">无障碍设计</label>
+                    <p>能否很容易地满足那些拥有不同技能和使用受限设备的用户的需求。<a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/accessibility.html" target="_blank">Read more <span class="visually-hidden"> about GOV.UK Accessibility</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox12" type="checkbox">
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
+        <!-- <div class="row clearfix">
             <div id="Love" class="title">
                 <span id="LoveTitleIcon" class="span--iconTitle">
                         <i class="fa fa-heart"></i>
@@ -297,7 +192,7 @@
                     <img class="left" src="img/icons128/plant.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox101">Sustainable</label>
+                    <label for="checkbox101">可持续</label>
                     <p> Help the planet by reducing the resources you use, reinforce greener behaviours and promote sustainability best practices. Yes, your product can do that! <a class="more hide-for-print" href=" https://uxdesign.cc/product-design-for-sustainability-3fffbb2a7f0e" target="_blank">Read more<span class="visually-hidden"> about Product Design for Sustainability</span></a></p>
                 </div>
                 <div class="right">
@@ -309,7 +204,7 @@
                     <img class="left" src="img/icons128/medical-box.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox111">Ethical</label>
+                    <label for="checkbox111">正能量</label>
                     <p>Move fast and break things! What about slow down and make sure your product is secure, private, honest? Be considerate when you design and follow good ethics.<a class="more hide-for-print" href="https://medium.muz.li/the-state-of-ethics-in-design-60a1088f8358" target="_blank"> Read more<span class="visually-hidden"> about The State of Ethics in Design</span></a></p>
                 </div>
                 <div class="right">
@@ -321,23 +216,23 @@
                     <img class="left" src="img/icons128/inclusive-icon.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox121">Inclusive</label>
+                    <label for="checkbox121">包容</label>
                     <p>Remember that everything you design is skewed by your own view and background. Be sure to open your design process to remove your biases and design for everyone.<a class="more hide-for-print" href="https://uxdesign.cc/how-design-can-help-with-inclusion-9d71a60d6359" target="_blank"> Read more<span class="visually-hidden"> about How design can help with inclusion</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox121" type="checkbox">
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row clearfix">
-            <div id="Create" class="title"><span>Create</span></div>
+            <div id="Create" class="title"><span>构建</span></div>
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/Squeeze-Page.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox13">UI elements</label>
-                    <p>Reuse elements and patterns. Follow your style guidelines. Don't have any? Create your guidelines. Start small, then create pages. <a class="more hide-for-print" href="http://styleguides.io/" target="_blank">Read more<span class="visually-hidden"> about styleguides.io</span></a></p>
+                    <label for="checkbox13">UI 元素</label>
+                    <p>遵循设计规范。没有？去建立一个。从小处着手，然后开始设计。<a class="more hide-for-print" href="http://styleguides.io/" target="_blank">Read more<span class="visually-hidden"> about styleguides.io</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox13" type="checkbox">
@@ -348,8 +243,8 @@
                     <img class="left" src="img/icons128/cell.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox14">Gestures</label>
-                    <p>So you have a swipe slider? Tell me more about pinch, drag, zoom, rotate, shake, six-inch smartphones, left-handed people, mouseover, kinect, motion detection... <a class="more hide-for-print" href="http://www.smashingmagazine.com/2013/05/24/gesture-driven-interface/" target="_blank">Read more<span class="visually-hidden"> about Beyond The Button: Embracing The Gesture-Driven Interface</span></a></p>
+                    <label for="checkbox14">手势</label>
+                    <p>滑动，收缩，拖动，放大，旋转，摇晃，左撇子，鼠标移动，体感，运动感知...<a class="more hide-for-print" href="http://www.smashingmagazine.com/2013/05/24/gesture-driven-interface/" target="_blank">Read more<span class="visually-hidden"> about Beyond The Button: Embracing The Gesture-Driven Interface</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox14" type="checkbox">
@@ -360,8 +255,8 @@
                     <img class="left" src="img/icons128/User-Experience.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox15">Responsiveness</label>
-                    <p>Can I see it on my mobile? Oh wait, what about my smart-watch which works as a remote for my 50" TV. Bonus: remember cross device experience. <a class="more hide-for-print" href="http://uxmag.com/articles/create-a-better-responsive-user-experience/" target="_blank">Read more<span class="visually-hidden"> about Create a Better Responsive User Experience</span></a></p>
+                    <label for="checkbox15">跨平台</label>
+                    <p>我的手机上能看到吗？智能手表，50寸电视呢？产品的跨平台体验如何？<a class="more hide-for-print" href="http://uxmag.com/articles/create-a-better-responsive-user-experience/" target="_blank">Read more<span class="visually-hidden"> about Create a Better Responsive User Experience</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox15" type="checkbox">
@@ -369,14 +264,14 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div id="Feedbacks" class="title"><span>Give feedback</span></div>
+            <div id="Feedbacks" class="title"><span>反馈</span></div>
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/lunch.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox16">Waiting times</label>
-                    <p>If your users have to wait ages for the page to load, at least show them a loader. If take longer why don't you try something more entertaining? <a class="more hide-for-print" href="http://www.sitepoint.com/3-tips-make-application-feel-faster/" target="_blank">Read more<span class="visually-hidden"> about 3 Tips To Make Your Application Feel Faster</span></a></p>
+                    <label for="checkbox16">等待</label>
+                    <p>如果你的用户打开网页需要很长时间，你至少要给他们展示个进度条。如果加载时间更长，那为什么不试试放一些更有趣的内容？<a class="more hide-for-print" href="http://www.sitepoint.com/3-tips-make-application-feel-faster/" target="_blank">Read more<span class="visually-hidden"> about 3 Tips To Make Your Application Feel Faster</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox16" type="checkbox">
@@ -387,8 +282,8 @@
                     <img class="left" src="img/icons128/Spam.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox17">Errors</label>
-                    <p>Be clear and specific on what and where user's error is. I mean, your error, because if it's your fault you should say it. <a class="more hide-for-print" href="http://uxmag.com/articles/failing-gracefully" target="_blank">Read more<span class="visually-hidden"> about Failing Gracefully</span></a></p>
+                    <label for="checkbox17">错误</label>
+                    <p>用户哪里犯了错，犯了什么错要展示地清晰和明确，同样如果是产品问题，一样也要清晰明确的展示出来，最好有怎么解决这个问题的方法或者用户在遇到这种错误时改怎么做。 <a class="more hide-for-print" href="http://uxmag.com/articles/failing-gracefully" target="_blank">Read more<span class="visually-hidden"> about Failing Gracefully</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox17" type="checkbox">
@@ -399,8 +294,8 @@
                     <img class="left" src="img/icons128/Usability.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox18">Completed actions</label>
-                    <p>Give immediate and clear feedback of successful user's actions. Do not always wait for server response, trust your server once in a while! <a class="more hide-for-print" href="http://www.lukew.com/ff/entry.asp?1759" target="_blank">Read more<span class="visually-hidden"> about Performing Actions Optimistically</span></a></p>
+                    <label for="checkbox18">完成动作</label>
+                    <p>对用户成功的操作要给予及时和明确的反馈。<a class="more hide-for-print" href="http://www.lukew.com/ff/entry.asp?1759" target="_blank">Read more<span class="visually-hidden"> about Performing Actions Optimistically</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox18" type="checkbox">
@@ -408,14 +303,14 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div id="Finalise" class="title"><span>Finalise</span></div>
+            <div id="Finalise" class="title"><span>定稿</span></div>
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/Optimization.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox19">Finalise layout</label>
-                    <p>It's time to let your design shine, make it in the right way, don't stop with the first solution, always ask "is this the best you can do?" <a class="more hide-for-print" href="http://www.usability.gov/what-and-why/visual-design.html" target="_blank">Read more<span class="visually-hidden"> about Visual Design Basics</span></a></p>
+                    <label for="checkbox19">设计定稿</label>
+                    <p>确保产品的设计以正确的方式呈现。多问自己“这是我能做到的最好的么？”,“这是最好的解决方案吗？”。<a class="more hide-for-print" href="http://www.usability.gov/what-and-why/visual-design.html" target="_blank">Read more<span class="visually-hidden"> about Visual Design Basics</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox19" type="checkbox">
@@ -426,8 +321,8 @@
                     <img class="left" src="img/icons128/E-Commerce.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox20">Use of images and icons</label>
-                    <p>Use of icons and images is strongly influenced by context, culture and layout that you use. Like icons, test your images, small changes can bring huge improvements. <a class="more hide-for-print" href="http://www.nngroup.com/articles/icon-usability/" target="_blank">Read more<span class="visually-hidden"> about Icon Usability</span></a></p>
+                    <label for="checkbox20">使用图片和Icon</label>
+                    <p>图标和图片的使用很大程度上取决你产品的语境、性格。 有时候小小的改变，会带来极大的进步。<a class="more hide-for-print" href="http://www.nngroup.com/articles/icon-usability/" target="_blank">Read more<span class="visually-hidden"> about Icon Usability</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox20" type="checkbox">
@@ -438,8 +333,8 @@
                     <img class="left" src="img/icons128/Heading-Tag.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox21">Font & colours hierarchy</label>
-                    <p>Use colours and font sizes properly, try to follow your guidelines and keep it simple. The best visual hierarchies lead users to take the action confidently. <a class="more hide-for-print" href="http://52weeksofux.com/post/443828775/visual-hierarchy" target="_blank">Read more<span class="visually-hidden"> about Visual hierarchy</span></a></p>
+                    <label for="checkbox21">字体&颜色层级</label>
+                    <p>正确使用颜色和字体大小，遵从你的设计规范并保持简单。好的视觉层次能极大提升使用体验。<a class="more hide-for-print" href="http://52weeksofux.com/post/443828775/visual-hierarchy" target="_blank">Read more<span class="visually-hidden"> about Visual hierarchy</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox21" type="checkbox">
@@ -447,14 +342,14 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div id="Delight" class="title"><span>Delight</span></div>
+            <div id="Delight" class="title"><span>愉悦</span></div>
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/pen-ink.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox22">Micro copy</label>
-                    <p>Every word is important, and a bit of personality will help your brand. <a class="more hide-for-print" href="http://www.smashingmagazine.com/2012/07/18/the-personality-layer/" target="_blank">Read more<span class="visually-hidden"> about The Personality Layer</span></a></p>
+                    <label for="checkbox22">细微处的文案</label>
+                    <p>每处文字都很重要，带上一点个性的文字对你的品牌也会有帮助。<a class="more hide-for-print" href="http://www.smashingmagazine.com/2012/07/18/the-personality-layer/" target="_blank">Read more<span class="visually-hidden"> about The Personality Layer</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox22" type="checkbox">
@@ -465,8 +360,8 @@
                     <img class="left" src="img/icons128/search-document.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox23">Micro interactions</label>
-                    <p>Trigger, rules, feedback, loop. Details make the product. Bonus: Ever heard about easter eggs? <a class="more hide-for-print" href="http://microinteractions.com/what-is-a-microinteraction/" target="_blank">Read more<span class="visually-hidden"> about What is a microinteraction</span></a></p>
+                    <label for="checkbox23">微交互</label>
+                    <p>触发器，规则，反馈路径。细节决定成败。一个梗或者彩蛋的效果有时候超出你的想象。<a class="more hide-for-print" href="http://microinteractions.com/what-is-a-microinteraction/" target="_blank">Read more<span class="visually-hidden"> about What is a microinteraction</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox23" type="checkbox">
@@ -477,8 +372,8 @@
                     <img class="left" src="img/icons128/Exit-Page.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox24">Transitions</label>
-                    <p>Motion shouldn't be only beautiful, it should build meaning about the spatial relationships, functionality, and intention of the system. <a class="more hide-for-print" href="http://www.google.co.uk/design/spec/animation/authentic-motion.html" target="_blank">Read more<span class="visually-hidden"> about Material Design Authentic motion</span></a></p>
+                    <label for="checkbox24">过渡</label>
+                    <p>动效不能只是很炫，它应该能反映空间关系，功能以及你需要传达的意图。 动效同样也需要符合设计规范的动效规范。<a class="more hide-for-print" href="http://www.google.co.uk/design/spec/animation/authentic-motion.html" target="_blank">Read more<span class="visually-hidden"> about Material Design Authentic motion</span></a></p>
                     <!-- http://www.smashingmagazine.com/2013/10/23/smart-transitions-in-user-experience-design/ -->
                     <!-- http://www.smashingmagazine.com/2012/02/28/mission-transition/ -->
                 </div>
@@ -488,14 +383,14 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div id="Analyse" class="title"><span>Analyse</span></div>
+            <div id="Analyse" class="title"><span>分析</span></div>
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/target-copy.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox26">KPI Setup</label>
-                    <p>What you want to achieve? What are your goals? Write down how you define success and failure and check if you have everything you need to collect the data. <a class="more hide-for-print" href="http://www.gv.com/lib/how-to-choose-the-right-ux-metrics-for-your-product" target="_blank">Read more<span class="visually-hidden"> about How to Choose the Right UX Metrics for Your Product</span></a></p>
+                    <label for="checkbox26">建立KPI</label>
+                    <p>你的目标是什么？定义你需要达到的目标，并检查你所需要跟踪的数据。<a class="more hide-for-print" href="http://www.gv.com/lib/how-to-choose-the-right-ux-metrics-for-your-product" target="_blank">Read more<span class="visually-hidden"> about How to Choose the Right UX Metrics for Your Product</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox26" type="checkbox">
@@ -506,8 +401,8 @@
                     <img class="left" src="img/icons128/Article-Marketing.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox25">AB Test plan</label>
-                    <p>Plan your AB test ahead and, if you can, plan a short roadmap of improvements. Your goal is not just improving KPIs, but learning something. <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/multivariate-testing.html" target="_blank">Read more<span class="visually-hidden"> about Craig Sullivan, an industry expert on conversion optimisation</span></a></p>
+                    <label for="checkbox25">AB Test</label>
+                    <p>事先计划好AB Test，以及测试需要的环境、数据。 确保AB test目标准确，过程可控，结果可依赖。<a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/multivariate-testing.html" target="_blank">Read more<span class="visually-hidden"> about Craig Sullivan, an industry expert on conversion optimisation</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox25" type="checkbox">
@@ -518,8 +413,8 @@
                     <img class="left" src="img/icons128/Conversion-Rate.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox27">Test</label>
-                    <p>UX lab, survey, sessions recording... test, observe and fix, test, observe and fix... <a class="more hide-for-print" href="http://www.nngroup.com/articles/which-ux-research-methods/" target="_blank">Read more<span class="visually-hidden"> about When to Use Which User-Experience Research Methods</span></a></p>
+                    <label for="checkbox27">测试</label>
+                    <p>用研测试，问卷，访谈录音…测试，观察、研究并优化，循环往复...<a class="more hide-for-print" href="http://www.nngroup.com/articles/which-ux-research-methods/" target="_blank">Read more<span class="visually-hidden"> about When to Use Which User-Experience Research Methods</span></a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox27" type="checkbox">
@@ -528,125 +423,27 @@
         </div>
     </form>
     <footer id="footer" class="flexcontainer hide-for-print">
-
-        <div class="footerColumn hide-for-print">
-            <h3>Learn more</h3>
-            <h4>Read the story on Medium</h4>
-            <div id="articlePopUp" class="">
-                <a id="mediumLink" target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
-                    <img src="img/medium-author.png" alt="Author: Andrea" width="160">
-                    <img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
-                    <h2>UX Project Checklist — Why I made it and what’s next</h2>
-                </a>
-            </div>
-            <h4>Get $250 OFF on Springboard courses</h4>
-            <div id="springboard" class="">
-                <a id="springboardLink" target="_blank" href="https://www.springboard.com/invite/XUCZ1/">
-                    <img src="img/springboard.png" alt="Learn UX on Springboard">
-                </a>
-            </div>
-        </div>
-
-        <div class="footerColumn">
-            <h3>About</h3>
-            <h4 id="credits">Created by</h4>
-            <a id="sovesove" class="twitterCard" href="https://twitter.com/sovesove" target="_blank"><img src="https://avatars.io/twitter/sovesove" alt=""><p>@sovesove</p></a></br>
-            <h4 id="inspiredby" class="hide-for-print clearfix">Friends</h4>
-            <a id="alefranz" class="twitterCard" href="https://twitter.com/alefranz" target="_blank"><img src="https://avatars.io/twitter/alefranz" alt=""><p>@alefranz</p></a></br>
-            <a id="uxstore" class="twitterCard" href="https://www.uxstore.com" target="_blank"><img src="/img/uxstore.png" alt="www.uxstore.com"></a></br>
-            <a id="friendsPopup" href="#friends" class="open-popup-link">Other credits</a></br>
-
-            <div id="friends" class="white-popup mfp-hide">
-                <p>
-                    Inspired by&nbsp;<a href="http://webdesignerschecklist.com/" target="_blank">this</a>,&nbsp;<a href="https://stayintech.com/info/UX" target="_blank">this</a>&nbsp;and&nbsp;<a href="http://ixdchecklist.com/" target="_blank">this</a>
-                </p>
-                <p>
-                    Also thanks to:</br>
-                    <a href="http://www.manuelalangella.com/" target="_blank">Manuela</a> for the superb illustrated icons.</br>
-                    <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a> for this responsive modal popup.</br>
-                    <a href="http://garlicjs.org/" target="_blank">GarlicJs</a> for the garlic, which everyone knows helps you save digital things locally in your browser.</br>
-                    <a href="http://fntneves.github.io/jquery-labelauty/" target="_blank">Labelauty</a> for the checkbox beautifier.</br>
-                    <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> for the iconic font.</br>
-                </p>
-            </div>
-        </div>
-
         <div class="footerColumn footerToolbar">
-            <h3>Tools</h3>
             <div id="toolbar" class="hide-for-print">
                 <button id="print" type="button"><i class="fa fa-print"></i>Print</button>
                 <button id="reset" class="resetBtn"><i class="fa fa-refresh"></i>Reset</button>
                 <a id="github" class="button" href="https://github.com/uxchecklist/uxchecklist.github.io" target="_blank"><i class="fa fa-github"></i>Fork</a>
             </div>
-
-            <div class="hide-for-print clearfix">
-                <a id="typeformLink" class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Tell us what you think!</a>
-                <script>
-                (function() {
-                    var qs, js, q, s, d = document,
-                        gi = d.getElementById,
-                        ce = d.createElement,
-                        gt = d.getElementsByTagName,
-                        id = 'typef_orm',
-                        b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
-                    if (!gi.call(d, id)) {
-                        js = ce.call(d, 'script');
-                        js.id = id;
-                        js.src = b + 'share.js';
-                        q = gt.call(d, 'script')[0];
-                        q.parentNode.insertBefore(js, q)
-                    }
-                    id = id + '_';
-                    /*if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}*/
-                })()
-                </script>
-            </div>
-
         </div>
-
-
-        <div id="buy-banner" class="buy-banner--wrapper buy-banner--wrapper--is-folded hide-for-print">
-            <div class="buy-banner--inner">
-                <span id="buy-banner-toggle" class="buy-banner--toggle">
-                    <i class="fa fa-chevron-up"></i>
-                </span>
-                <div class="buy-banner--header">
-                    <div id="buy-banner-toggle" class="buy-banner--text">
-                        <p>LOVE THIS?
-                            <br> Put it on your wall!</p>
-                    </div>
-                    <a id="buy-banner--button" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank" class="buy-banner--button">get the poster</a>
-                </div>
-                <div class="buy-banner--content">
-                    <a id="buy-banner--image" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
-                        <img src="img/banner.jpg" alt="" class="buy-banner--image">
-                    </a>
-                </div>
-            </div>
-        </div>
-        
     </footer>
 
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!-- <script src="js/vendor/jquery.js"></script> -->
     <script>
     window.Modernizr || document.write('<script type="text/javascript" src="js/vendor/modernizr.js">\x3C/script>');
     window.jQuery || document.write('<script type="text/javascript" src="js/vendor/jquery.js">\x3C/script>');
     </script>
     <script src="js/garlic.js"></script>
     <script src="js/jquery-labelauty.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
     <script>
     $(document).ready(function() {
         $(":checkbox").labelauty({ label: false });
         $("#checklist-form").garlic();
-        $("#print").on('click', function() {
-            ga('send', 'event', 'print', 'click', 'print');
-            window.print();
-        });
         $("#reset").on('click', function() {
-            ga('send', 'event', 'reset', 'click', 'reset');
             $('input:checkbox').each(function() {
                 $(this).prop('checked', false);
             });
@@ -654,80 +451,14 @@
         });
         $("#footer a").on('click', function(e) {
             var elm = e.currentTarget;
-            ga('send', 'event', 'footer', $(elm).attr('id'));
         });
         $("input:checkbox").on('change', function(e) {
             var cb = $(this);
             var id = cb.attr('id');
             var isChecked = cb.is(':checked');
-            ga('send', 'event', {
-                'eventCategory': 'checkbox',
-                'eventAction': isChecked ? 'set' : 'clear',
-                'eventLabel': id
             });
         });
-        $('.open-popup-link').magnificPopup({
-            type: 'inline',
-            midClick: true,
-            callbacks: {
-                open: function() {
-                    ga('send', 'event', 'popup', 'open', $(this.content).attr('id'));
-                },
-                close: function() {
-                    ga('send', 'event', 'popup', 'close', $(this.content).attr('id'));
-                }
-            }
-        });
-    });
-    //realtime api
-    var checkboxes = {};
-    var view = null;
-    var controller = null;
-    $().ready(function() {
-        var isFn = function(id, e) { return $(e).is(':checked'); };
-        var setFn = function(id, e, val) {
-            $(e).prop('checked', val);
-            $(e).garlic('persist');
-        };
-        $('input:checkbox').each(function() {
-            var id = $(this).attr('id');
-            checkboxes[id] = new Realtime.Model.CheckBox(id, this, isFn, setFn);
-        });
-        view = new Realtime.View(checkboxes);
-        var cb = view.checkboxes;
-        console.log(cb);
-        controller = new Realtime.Controller(view);
-        gapi.load("auth:client,drive-realtime,drive-share", function() {
-            controller.init();
-            $('form').on('change', 'input:checkbox', function(ev) {
-                console.log(ev);
-                controller.onCheckBoxChange($(ev.target).attr('id'));
-            });
-            var signinSuccess = function() {
-                $('#signin-do').hide();
-                $('#signin-fail').hide();
-                $('#signin-success').show();
-                $("#reset").on('click', function() {
-                    controller.save();
-                });
-            };
-            var signinFailed = function() {
-                $('#signin-fail').show();
-            };
-            controller.auth(true,
-                signinSuccess,
-                function() { $('#signin-do').show(); }
-            );
-            $('#signin').on('click', function() {
-                controller.auth(false, signinSuccess, signinFailed);
-            });
-        });
-    });
     </script>
-    <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
-    <script type="text/javascript" src="js/realtime.js"></script>
-    <script type="text/javascript" src="js/index-single.js"></script>
-    
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
-
 </html>
